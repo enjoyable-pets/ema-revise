@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="lt" class="teacher-layout teacher-layout--white-background ">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"155d731471",applicationID:"368308365"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/favicon.ico">
+<title>EMA elektroninė mokymosi aplinka</title>
+<script>
+    var APP = APP || {};
+    /**
+     * Wrapper function for Rollbar.error().
+     */
+    APP.reportError = function(/** string */ title, /** Array|Object|null= */ params, /** string|null= */ fingerprint, /** function= */ callback) {
+        // configure fingerprint
+        if (typeof(Rollbar) !== 'undefined' && typeof fingerprint !== 'undefined' && fingerprint) {
+            Rollbar.configure({
+                payload: {
+                    fingerprint: fingerprint
+                }
+            });
+        }
+        // report
+        if (typeof(Rollbar) !== 'undefined') {
+            Rollbar.error(title, params, callback);
+        } else {
+            console.error('APP.reportError: Rollbar is disabled, not reporting: ' + "\n" + title);
+            if (params) {
+                console.log(params);
+            }
+            if (callback) {
+                callback();
+            }
+        }
+    }
+</script>
+<script>
+            // Rollbar configuration
+            var _rollbarConfig = {
+                accessToken: 'ef4691e4935d489d8a65436fb6a3cd2b',
+                                ignoredMessages: [
+                    'Script error',
+                    'Script error.',
+                    'Синтаксическая ошибка',
+                    'Syntax error',
+                    'this.get(...).querySelectorAll is not a function',
+                    'Cannot read property \'manipulate_settings\' of undefined',
+                    'Can\'t execute code from a freed script',
+                    'Missing required parameters: sitekey'
+                ],
+                captureUncaught: true,
+                captureUnhandledRejections: true,
+                payload: {
+                    environment: 'production'
+                },
+                // Limits item count being sent to rollbar to 10 per client (default: 60 items per minute).
+                itemsPerMinute: 10,
+                // Limits item count being sent to rollbar to 10 per client for each page load (default: no limit)
+                maxItems: 10,
+                hostWhiteList: ['epratybos.lt', 'emapamokos.lt']
+            };
+
+            // Rollbar Snippet
+            !function(r){function o(n){if(e[n])return e[n].exports;var t=e[n]={exports:{},id:n,loaded:!1};return r[n].call(t.exports,t,t.exports,o),t.loaded=!0,t.exports}var e={};return o.m=r,o.c=e,o.p="",o(0)}([function(r,o,e){"use strict";var n=e(1),t=e(4);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/2.3.1/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,o,e){"use strict";function n(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}function t(r,o){this.options=r,this._rollbarOldOnError=null;var e=s++;this.shimId=function(){return e},window&&window._rollbarShims&&(window._rollbarShims[e]={handler:o,messages:[]})}function a(r,o){var e=o.globalAlias||"Rollbar";if("object"==typeof r[e])return r[e];r._rollbarShims={},r._rollbarWrappedError=null;var t=new p(o);return n(function(){o.captureUncaught&&(t._rollbarOldOnError=r.onerror,i.captureUncaughtExceptions(r,t,!0),i.wrapGlobals(r,t,!0)),o.captureUnhandledRejections&&i.captureUnhandledRejections(r,t,!0);var n=o.autoInstrument;return o.enabled!==!1&&(void 0===n||n===!0||"object"==typeof n&&n.network)&&r.addEventListener&&(r.addEventListener("load",t.captureLoad.bind(t)),r.addEventListener("DOMContentLoaded",t.captureDomContentLoaded.bind(t))),r[e]=t,t})()}function l(r){return n(function(){var o=this,e=Array.prototype.slice.call(arguments,0),n={shim:o,method:r,args:e,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)})}var i=e(2),s=0,d=e(3),c=function(r,o){return new t(r,o)},p=d.bind(null,c);t.prototype.loadFull=function(r,o,e,t,a){var l=function(){var o;if(void 0===r._rollbarDidLoad){o=new Error("rollbar.js did not load");for(var e,n,t,l,i=0;e=r._rollbarShims[i++];)for(e=e.messages||[];n=e.shift();)for(t=n.args||[],i=0;i<t.length;++i)if(l=t[i],"function"==typeof l){l(o);break}}"function"==typeof a&&a(o)},i=!1,s=o.createElement("script"),d=o.getElementsByTagName("script")[0],c=d.parentNode;s.crossOrigin="",s.src=t.rollbarJsUrl,e||(s.async=!0),s.onload=s.onreadystatechange=n(function(){if(!(i||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){s.onload=s.onreadystatechange=null;try{c.removeChild(s)}catch(r){}i=!0,l()}}),c.insertBefore(s,d)},t.prototype.wrap=function(r,o,e){try{var n;if(n="function"==typeof o?o:function(){return o||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){e&&"function"==typeof e&&e.apply(this,arguments);try{return r.apply(this,arguments)}catch(e){var o=e;throw"string"==typeof o&&(o=new String(o)),o._rollbarContext=n()||{},o._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=o,o}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(o){return r}};for(var u="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","),f=0;f<u.length;++f)t.prototype[u[f]]=l(u[f]);r.exports={setupShim:a,Rollbar:p}},function(r,o){"use strict";function e(r,o,e){if(r){var t;"function"==typeof o._rollbarOldOnError?t=o._rollbarOldOnError:r.onerror&&!r.onerror.belongsToShim&&(t=r.onerror,o._rollbarOldOnError=t);var a=function(){var e=Array.prototype.slice.call(arguments,0);n(r,o,t,e)};a.belongsToShim=e,r.onerror=a}}function n(r,o,e,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null),o.handleUncaughtException.apply(o,n),e&&e.apply(r,n)}function t(r,o,e){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var e=r.reason,n=r.promise,t=r.detail;!e&&t&&(e=t.reason,n=t.promise),o&&o.handleUnhandledRejection&&o.handleUnhandledRejection(e,n)};n.belongsToShim=e,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}}function a(r,o,e){if(r){var n,t,a="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(n=0;n<a.length;++n)t=a[n],r[t]&&r[t].prototype&&l(o,r[t].prototype,e)}}function l(r,o,e){if(o.hasOwnProperty&&o.hasOwnProperty("addEventListener")){for(var n=o.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(o,e,t){n.call(this,o,r.wrap(e),t)};t._rollbarOldAdd=n,t.belongsToShim=e,o.addEventListener=t;for(var a=o.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,o,e){a.call(this,r,o&&o._rollbar_wrapped||o,e)};l._rollbarOldRemove=a,l.belongsToShim=e,o.removeEventListener=l}}r.exports={captureUncaughtExceptions:e,captureUnhandledRejections:t,wrapGlobals:a}},function(r,o){"use strict";function e(r,o){this.impl=r(o,this),this.options=o,n(e.prototype)}function n(r){for(var o=function(r){return function(){var o=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,o)}},e="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","),n=0;n<e.length;n++)r[e[n]]=o(e[n])}e.prototype._swapAndProcessMessages=function(r,o){this.impl=r(this.options);for(var e,n,t;e=o.shift();)n=e.method,t=e.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],e.ts]):this[n].apply(this,t));return this},r.exports=e},function(r,o){"use strict";r.exports=function(r){return function(o){if(!o&&!window._rollbarInitialized){r=r||{};for(var e,n,t=r.globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;e=window._rollbarShims[i++];)n||(n=e.handler),e.handler._swapAndProcessMessages(l,e.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
+            // End Rollbar Snippet
+
+            // Error reporting customization starts here
+                            Rollbar.configure({
+                    payload: {
+                        person: {
+                            id: '526692',
+                            username: 'rebeka-036836',
+                            email: ''
+                        }
+                    }
+                });
+                    </script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&subset=latin-ext" rel="stylesheet">
+
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;//noinspection CommaExpressionJS
+            i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();//noinspection CommaExpressionJS
+            a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-42382589-8', 'auto', {'allowLinker': true});
+        ga('require', 'displayfeatures');         ga('require', 'linker');
+        ga('linker:autoLink', ['epratybos.lt']);
+
+                                ga('set', {'userId': '2fcc2ae3506e2f2fec9f127c0f82f2b4'});                         ga('set', 'dimension1', 'mokinys');
+                        ga('set', 'dimension2', 'Alytaus&#x20;Liki&#x0161;k&#x0117;li&#x0173;&#x20;progimnazija');
+                        ga('set', 'dimension3', 'Alytaus&#x20;m.&#x20;sav.');
+        
+        ga('send', 'pageview');
+    </script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42382589-10"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-42382589-10', {"dimension1":"ema","linker":{"domains":["epratybos.lt","egzaminatorius.lt","emapamokos.lt"]},"user_id":"62e9eede7ebadcb3619aada12a572231"});
+</script>
+<script>
+    var APP = APP || {};
+            APP.baseUrl = '';
+        APP.requestRelativeUri = '/m/vadovelis/mokinio-paskyrimas/1d69f69a-f33e-11e9-a931-005056a48565';
+        APP.pathInfoHash = 'c53d644ed7ed4dd7d73f90278de0f4ac';
+        APP.requestUri = 'https://emapamokos.lt/m/vadovelis/mokinio-paskyrimas/1d69f69a-f33e-11e9-a931-005056a48565';
+        APP.questionInput = APP.questionInput || {};
+    APP.questionInput.colorable = APP.questionInput.colorable || {};
+    APP.questionInput.colorable.colors = {};
+            APP.questionInput.colorable.colors.yellow = ('#F9DE3D');
+            APP.questionInput.colorable.colors.orange = ('#FBB03B');
+            APP.questionInput.colorable.colors.red = ('#E86767');
+            APP.questionInput.colorable.colors.blue = ('#7DB1EA');
+            APP.questionInput.colorable.colors.green = ('#B0CE52');
+    
+    var COLORABLE_COLOR_NONE = 'none';
+
+    var TEST_IS_STOPPED_BY_TEACHER = 1;
+    var TEST_IS_STOPPED_TIME_IS_UP = 2;
+
+    var STUDENT_TEST_STATE_TIMED_UP = 'timedUp';
+    var STUDENT_TEST_STATE_TEACHER_STOPPED = 'teacherStopped';
+    var STUDENT_TEST_STATE_TEACHER_REVIEWED = 'teacherReviewed';
+
+    var VIEW_MODE_STUDENT_TEST_IN_PROGRESS = 'modeStudentTestInProgress';
+    var VIEW_MODE_STUDENT_TEST_READ_ONLY_VIEW = 'modeStudentReadOnlyView';
+    var VIEW_MODE_TEACHER_STUDENT_TEST_VIEW = 'modeTeacherStudentTestView';
+    var VIEW_MODE_TEACHER_QUESTION_SET_PREVIEW = 'modeTeacherQuestionSetPreview';
+    var VIEW_MODE_TEACHER_REVIEW = 'teacherReview';
+    var VIEW_MODE_STUDENT_TEST_REVIEW_RESULTS = 'studentTestReviewResults';
+    var CHECKABLE_INPUT_CHECKED_VALUE = 'on';
+
+    var STUDENT_TEST_AJAX_SAVE_ERROR_CODE_AJAX_SAVE_FINISHED_TEST = 1;
+    var STUDENT_TEST_AJAX_SAVE_ERROR_CODE_ANSWER_FORMAT_INVALID = 2;
+
+    /* Swal (sweet alert) icons https://limonte.github.io/sweetalert2/ */
+    var SWAL_TYPE_SUCCESS = 'success';
+    var SWAL_TYPE_ERROR = 'error';
+    var SWAL_TYPE_WARNING = 'warning';
+    var SWAL_TYPE_INFO = 'info';
+    var SWAL_TYPE_QUESTION = 'question';
+
+    var PNOTIFY_STACK_BOTTOM_RIGHT = {"dir1": "up", "dir2": "left", "firstpos1": 50, "firstpos2": 2};
+    var PNOTIFY_STACK_BOTTOM_LEFT = {"dir1": "up", "dir2": "right", "firstpos1": 50, "firstpos2": 2};
+
+    var CONTACT_EMAIL = 'info@emapamokos.lt';
+    var CONTACT_PHONE = '+370 5 214 1306';
+</script>
+<script src="https://emapamokos.lt/build/runtime.3222a91ab0a966e050c9.js"></script><script src="https://emapamokos.lt/build/0.f2a0980d25036293c7fb.js"></script><script src="https://emapamokos.lt/build/global.jquery.358c642ae3411aa21418.js"></script>
+<link rel="stylesheet" href="https://emapamokos.lt/build/global.bootstrap.b1af5cad97709b72ffb9.css" />
+<script src="https://emapamokos.lt/build/1.42d0ef58e4912470816b.js"></script><script src="https://emapamokos.lt/build/global.bootstrap.3f27fe26e125190b144a.js"></script>
+<link rel="stylesheet" href="https://emapamokos.lt/build/utils.3e263ee6eb83d53e58d8.css" />
+<script src="https://emapamokos.lt/build/googleAnalyticsEventTrackingComponent.bafc5b7c29975a9f24f1.js"></script>
+<link rel="stylesheet" href="https://emapamokos.lt/build/baseLayoutView.f244822395cdb862a0ff.css" />
+<link rel="stylesheet" href="https://emapamokos.lt/build/textbookTopicView.6530a6bd4f2145656629.css" />
+</head>
+<body class="">
+<nav class="navbar navbar-ema slh-studentLayoutHeader" role="navigation">
+<div class="container">
+
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#studentLayoutHeaderCollapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="https://emapamokos.lt/m"></a>
+</div>
+
+<div class="collapse navbar-collapse" id="studentLayoutHeaderCollapse">
+<ul class="nav navbar-nav navbar-right slh-links">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<i class="fa fa-user"></i> Rebeka <span class="caret"></span>
+</a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://emapamokos.lt/sistema"><i class="fa fa-cogs"></i> Sistemos reikalavimai</a></li>
+</ul>
+</li>
+<li>
+<a class="btn btn-danger navbar-btn slh-logoutButton" href="https://emapamokos.lt/m/logout" id="btn-logout">
+Atsijungti <i class="fa fa-sign-out fa-fw"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="container">
+</div>
+<div class="textbook js-app-textbook textbook--student-view
+            tst-textbook-topic-page__student-assignment-id-1d69f69a-f33e-11e9-a931-005056a48565            tst-textbook-topic-page__topic_id-1428
+        " id="home">
+<div class="textbook-top-header js-textbook-header">
+<div class="textbook__container textbook__container--header">
+<div class="textbook-sticky-header__row"><div class="col-md-12"><h1 class="textbook-topic-title"><a href="#home" class="textbook-topic-title__anchor js-textbook-toc__link">Masė </a></h1></div></div><div id="js-spy-textbook-toc"><ul class="textbook-toc nav"><li class="textbook-toc__link-block"><a href="#infographic" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-infographic" class="textbook-toc__link js-textbook-toc__link" title="Infografikas"><span class="textbook-toc__link-icon textbook-toc__link-icon--icon-infographic"></span><span class="textbook-toc__link-title">Infografikas</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph1" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-1" class="textbook-toc__link js-textbook-toc__link" title="Ką žinai apie masę?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">1</span><span class="textbook-toc__link-title">Ką žinai apie masę?</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph2" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-2" class="textbook-toc__link js-textbook-toc__link" title="Kokie yra pagrindiniai masės matavimo vienetai?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">2</span><span class="textbook-toc__link-title">Kokie yra pagrindiniai masės...</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph3" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-3" class="textbook-toc__link js-textbook-toc__link" title="Kas yra kilogramas?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">3</span><span class="textbook-toc__link-title">Kas yra kilogramas?</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph4" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-4" class="textbook-toc__link js-textbook-toc__link" title="Kokiais vienetais matuojama brangakmenių masė?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">4</span><span class="textbook-toc__link-title">Kokiais vienetais matuojama...</span></a></li><li class="textbook-toc__link-block"><a href="#summary" class="textbook-toc__link js-textbook-toc__link" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-summary" title="Ką svarbiausia žinoti apie masę?"><span class="textbook-toc__link-icon textbook-toc__link-icon--icon-summary"></span><span class="textbook-toc__link-title">Ką svarbiausia žinoti apie...</span></a></li></ul></div>
+</div>
+</div>
+<div class="textbook-sticky-header js-textbook-header js-overlay-helper__adjust-on-overlay" data-spy="affix" data-offset-top="230" data-offset-bottom="230">
+<div class="textbook__container textbook__container--header">
+<div class="textbook-sticky-header__row"><div class="col-md-12"><h1 class="textbook-topic-title"><a href="#home" class="textbook-topic-title__anchor js-textbook-toc__link">Masė </a></h1></div></div><div id="js-spy-textbook-toc"><ul class="textbook-toc nav"><li class="textbook-toc__link-block"><a href="#infographic" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-infographic" class="textbook-toc__link js-textbook-toc__link" title="Infografikas"><span class="textbook-toc__link-icon textbook-toc__link-icon--icon-infographic"></span><span class="textbook-toc__link-title">Infografikas</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph1" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-1" class="textbook-toc__link js-textbook-toc__link" title="Ką žinai apie masę?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">1</span><span class="textbook-toc__link-title">Ką žinai apie masę?</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph2" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-2" class="textbook-toc__link js-textbook-toc__link" title="Kokie yra pagrindiniai masės matavimo vienetai?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">2</span><span class="textbook-toc__link-title">Kokie yra pagrindiniai masės...</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph3" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-3" class="textbook-toc__link js-textbook-toc__link" title="Kas yra kilogramas?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">3</span><span class="textbook-toc__link-title">Kas yra kilogramas?</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph4" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-4" class="textbook-toc__link js-textbook-toc__link" title="Kokiais vienetais matuojama brangakmenių masė?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">4</span><span class="textbook-toc__link-title">Kokiais vienetais matuojama...</span></a></li><li class="textbook-toc__link-block"><a href="#summary" class="textbook-toc__link js-textbook-toc__link" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-summary" title="Ką svarbiausia žinoti apie masę?"><span class="textbook-toc__link-icon textbook-toc__link-icon--icon-summary"></span><span class="textbook-toc__link-title">Ką svarbiausia žinoti apie...</span></a></li></ul></div>
+</div>
+</div>
+<br>
+<div class="textbook__container js-textbook__container">
+<div class="textbook-paragraph  textbook-collapsable js-textbook-collapsable collapse " id="infographic">
+<div class="textbook-paragraph-collapse js-textbook-paragraph-collapse"></div>
+<div class="textbook-paragraph-title  textbook-paragraph-title--clickable  js-textbook-paragraph__title" id="js-textbook-paragraph-title-infographic">
+<div class="textbook-paragraph-title__index textbook-paragraph-title__index--infographic"></div><div class="textbook-paragraph-title__text">Infografikas</div> </div>
+<div class="textbook-column textbook-column--center-block">
+<div class="textbook-column__container">
+<div class="textbook-infographic js-textbook-infographic">
+<img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQV4BGHgnJ5zo2qlLJMcn2SmZGDlBP5jozp=/242895-infografikas1428.png" class="textbook-infographic__image js-textbook-infographic__image" alt="Infografikas: Masė">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="textbook__container js-textbook__container">
+<div class="textbook-paragraph js-textbook-paragraph textbook-collapsable js-textbook-collapsable tst-textbook-paragraph collapse" id="paragraph1" data-paragraph_id="111803">
+<div class="textbook-paragraph-collapse js-textbook-paragraph-collapse" id="js-textbook-paragraph-title-1"></div>
+<div class="textbook-paragraph-title textbook-paragraph-title--clickable js-textbook-paragraph__title">
+<div class="textbook-paragraph-title__index">1</div><div class="textbook-paragraph-title__text">Ką žinai apie masę?</div> </div>
+<div class="textbook-column textbook-column--student js-textbook-column--student textbook-column--center-block">
+<div class="textbook-column__container">
+<div class="textbook-column__header">
+<div class="textbook-column__header-text textbook-column__header-text--student">Mokinys</div>
+</div>
+<div class="textbook-column__content">
+<div class="textbook-markdown textbook-column__content-text">
+<p>Ant svarstyklių lėkštelės sudėti pomidorai (<a href="#p/1">#1 pav.</a>).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="1">1 pav.</span><span class="textbook-figure__caption-text">Svarstyklės</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQV5ZwZgZGRkBQNmZF5jozp=/242923-1118031.png" alt="Svarstyklės" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Kokia paveiksle pavaizduotų pomidorų masė? Atsakymą užrašyk trim būdais: kilogramais ir gramais, kilogramais, gramais.</div><div class="textbook-block-content__line">Kokios didžiausios masės daiktą galima pasverti šiomis svarstyklėmis?</div><div class="textbook-block-content__line">Kokia šių svarstyklių smulkiausios padalos vertė?</div></div></div></figure>
+<p>Norėdami sužinoti įvairių daiktų masę, naudojame svarstykles. Paveiksle pavaizduotos <strong>mechaninės svarstyklės</strong>, jos turi <span class="textbook-concept" data-toggle="tooltip" data-concept="Skãlė" title="Skãlė - matavimo prietaiso lentelė su padalomis ir skaičiais.">skãlę</span> su padalomis, o sveriamo objekto masę parodo rodyklė. Matome, kad ant lėkštelės sudėtų pomidorų masė yra 1 kg 200 g, arba 1,2 kg, arba 1 200 g. Šiomis svarstyklėmis galima pasverti daiktą, kurio masė neviršija 5 kg, o jų smulkiausios <span class="textbook-concept" data-toggle="tooltip" data-concept="Padalõs vertė̃" title="Padalõs vertė̃ - matuojamo dydžio didumas tarp nulinės padalos ir pirmo skalės brūkšnelio.">padalõs vertė̃</span> 20 g.</p>
+<p>Ar žinai, kokia buvo pati pirma masės matavimo priemonė? Tai <strong>balánsinės (svi̇̀rtinės) svarstỹklės</strong>. Jos sudarytos iš pagrindinio stovo, ant kurio horizontaliai laikosi svirtis. Ant vienos iš dviejų svirties lėkštelių yra padedamas daiktas, kurio masę norima sužinoti, o ant kitos – svareliai (<a href="#p/2">#2 pav.</a>). Kai abi lėkštelės atsiduria viename aukštyje, matuojamų daiktų masė nustatoma apskaičiuojant bendrą svarelių masę.</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="2">2 pav.</span><span class="textbook-figure__caption-text">Svarstyklės</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQVkBGZgZGRkBQNmZv5jozp=/242193-1118032.png" alt="Svarstyklės" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Nustatyk, kokia 2 pav. pavaizduotų kriaušių masė.</div></div></div></figure>
+<p>Šiuo metu naudojami patys įvairiausi svėrimo prietaisai. Jie gali būti pritaikomi prie įvairių darbo sąlygų, sujungiami su kompiuteriais, automatizuojami ir pan. Vienos iš populiariausių – elektroninės svarstyklės. Tai nedidelės apimties svėrimo darbams atlikti tinkamas prietaisas. Beveik kiekvienuose namuose rasime svarstykles maistui sverti, o vonioje – žmogaus masę matuojančias svarstykles.</p>
+<p>Svarstyklių technologijos sparčiai tobulėja. Tikriausiai pastebėjai, kiek daug informacijos ant etiketės spausdina parduotuvėse esančios svarstyklės. Jos gali būti užprogramuotos taip, kad spausdintų ne tik sveriamos prekės masę, bet ir prekės pavadinimą, kilogramo kainą ir netgi prekės sudėtį, fasavimo ir realizacijos datą bei laiką, parduotuvės pavadinimą, brūkšninį kodą ir kitus papildomus pranešimus (<a href="#p/3">#3 pav.</a>).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="3">3 pav.</span><span class="textbook-figure__caption-text">Elektroninės svarstyklės</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQVkBQxgZGRkBQNmZl5jozp=/242189-1118033.png" alt="Elektroninės svarstyklės" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Nustatyk, kokia 3 pav. pavaizduotų obuolių masė gramais.</div></div></div></figure>
+</div>
+<div class="textbook-external-resources">
+<div class="textbook-external-resource textbook-external-resource--video js-textbook-video" id="js-video111804" data-link_id="111804">
+<div class="textbook-external-resource__title textbook-external-resource__title--video">
+<div class="textbook-external-resource__title-text textbook-external-resource__title-text--video">Masės nustatymas balansinėmis svarstyklėmis</div>
+</div>
+<div class="textbook-external-resource__embed embed-responsive embed-responsive-16by9 tst-video-embed">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jPnUA1Z8FTg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+<div class="textbook-external-resource__task textbook-external-resource__task--video">
+<div class="textbook-external-resource__task-content">
+Peržiūrėk filmuką ir įsitikink, kad teisingai supratai, kaip balansinėmis svarstyklėmis nustatoma daikto masė.
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="textbook-column-task-icon"></div>
+<div class="textbook-column-task-icon__question"></div>
+<div class="textbook-column__container">
+<div class="textbook-column__content">
+<div class="textbook-column-section textbook-column-section--task">
+Klausimai ir užduotys
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task111805" data-task_id="111805" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="111805">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Kurio iš pateiktų daiktų masė gali būti mažesnė negu 1 gramas?</p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111805-0" name="task111805" data-comprehension_task_id="111805" data-answer_id="111805-0" data-correct_answer_id="111805-0" checked="checked">
+<label for="answer111805-0" class="textbook-comprehension-task__answer-label">Žiedlapio</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111805-2" name="task111805" data-comprehension_task_id="111805" data-answer_id="111805-2" data-correct_answer_id="111805-0">
+<label for="answer111805-2" class="textbook-comprehension-task__answer-label">Obuolio</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111805-1" name="task111805" data-comprehension_task_id="111805" data-answer_id="111805-1" data-correct_answer_id="111805-0">
+<label for="answer111805-1" class="textbook-comprehension-task__answer-label">Puodelio</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111805-3" name="task111805" data-comprehension_task_id="111805" data-answer_id="111805-3" data-correct_answer_id="111805-0">
+<label for="answer111805-3" class="textbook-comprehension-task__answer-label">Knygos</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task111806" data-task_id="111806" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="111806">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Kiek svarelių po 500 g reikėtų padėti ant kitos svarstyklių lėkštelės, kad svarstyklės būtų pusiausviros?</p>
+<p><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQVkBGLgZGRkBQN2YaOhMj==/242196-111806.png" alt="" /></p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111806-3" name="task111806" data-comprehension_task_id="111806" data-answer_id="111806-3" data-correct_answer_id="111806-0">
+<label for="answer111806-3" class="textbook-comprehension-task__answer-label">6</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111806-0" name="task111806" data-comprehension_task_id="111806" data-answer_id="111806-0" data-correct_answer_id="111806-0" checked="checked">
+<label for="answer111806-0" class="textbook-comprehension-task__answer-label">5</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111806-1" name="task111806" data-comprehension_task_id="111806" data-answer_id="111806-1" data-correct_answer_id="111806-0">
+<label for="answer111806-1" class="textbook-comprehension-task__answer-label">3</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111806-2" name="task111806" data-comprehension_task_id="111806" data-answer_id="111806-2" data-correct_answer_id="111806-0">
+<label for="answer111806-2" class="textbook-comprehension-task__answer-label">4</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+ <div class="textbook-column-section textbook-column-section--written-task">
+Atlik sąsiuvinyje
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111807" data-task_id="111807">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Pagal paveikslo duomenis nustatyk vieno pyragaičio ir vieno keksiuko masę.</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<p><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQV4AmVgZGRkBQN3YaOhMj==/242872-111807.png" alt=""></p>
+</div>
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111808" data-task_id="111808">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Paveiksle pavaizduotos ant svarstyklių lėkštelės subertos uogos.</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<p><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQV4AmpgZGRkBQN4YaOhMj==/242877-111808.png" alt=""></p>
+<ol class="textbook-structural-task">
+<li class="textbook-structural-task__item">Kokia yra svarstyklių skalės smulkiausios padalos vertė?</li>
+<li class="textbook-structural-task__item">Nustatyk sveriamų uogų masę. Atsakymą užrašyk trimis būdais: kilogramais, kilogramais ir gramais, gramais.</li>
+<li class="textbook-structural-task__item">Kiek dar gramų uogų reikia pridėti, kad jų bendra masė būtų 2,3 kg?</li>
+</ol>
+</div>
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111809" data-task_id="111809">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Pagal paveikslėlio duomenis nustatyk triušio, katino ir šuns bendrą masę.</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<p><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQVlZQVgZGRkBQN5YaOhMj==/242202-111809.png" alt=""></p>
+</div>
+ </div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111810" data-task_id="111810">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Iš devynių monetų viena moneta netikra.</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<p>Ji yra lengvesnė už tikrą monetą. Kaip svarstyklėmis su lėkštelėmis, neturint svarelių, per du svėrimus nustatyti, kuri moneta netikra?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="textbook__container js-textbook__container">
+<div class="textbook-paragraph js-textbook-paragraph textbook-collapsable js-textbook-collapsable tst-textbook-paragraph collapse" id="paragraph2" data-paragraph_id="111813">
+<div class="textbook-paragraph-collapse js-textbook-paragraph-collapse" id="js-textbook-paragraph-title-2"></div>
+<div class="textbook-paragraph-title textbook-paragraph-title--clickable js-textbook-paragraph__title">
+<div class="textbook-paragraph-title__index">2</div><div class="textbook-paragraph-title__text">Kokie yra pagrindiniai masės matavimo vienetai?</div> </div>
+<div class="textbook-column textbook-column--student js-textbook-column--student textbook-column--center-block">
+<div class="textbook-column__container">
+<div class="textbook-column__header">
+<div class="textbook-column__header-text textbook-column__header-text--student">Mokinys</div>
+</div>
+<div class="textbook-column__content">
+<div class="textbook-markdown textbook-column__content-text">
+<p>Ar teko kada nors virti grikių košę? Verdant grikių košę, 200 g kruopų reikia 2 stiklinių vandens ir pusės arbatinio šaukštelio druskos.</p>
+<p>Lentelėje nurodoma, kiek gramų vandens ir kiek gramų druskos telpa į šaukštelį, šaukštą ar stiklinę (<a href="#p/1">#1 pav.</a>).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="1">1 pav.</span><span class="textbook-figure__caption-text">Produktų masės lentelė</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQV4BQRgZGRkBQRmZF5jozp=/242881-1118131.png" alt="Produktų masės lentelė" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Kiek gramų vandens ir kiek gramų druskos reikia norint išvirti košę iš 200 g kruopų?</div><div class="textbook-block-content__line">Kiek gramų vandens ir kiek druskos reikia vienam kilogramui kruopų?</div></div></div></figure>
+<p>Pagal lentelę į stiklinę telpa 250 g vandens, o į šaukštelį – 10 g druskos, tad košei iš 200 g kruopų išvirti reikia 2 $ \cdot $ 250 = 500 g vandens ir 10 : 2 = 5 g druskos.</p>
+<p>Kadangi 1 kg = 1 000 g, o tai yra 5 kartus daugiau negu 200 g, vienam kilogramui kruopų reikės 5 kartus daugiau produktų.</p>
+<p>Taigi, vandens reikės 500 $ \cdot $ 5 = 2 500 gramų, o druskos – 5 $ \cdot $ 5 = 25 gramų.</p>
+<p>Pagrindinis masės matavimo vienetas yra kilogramas. Kasdieniame gyvenime masei nurodyti dažniausiai naudojami kilogramai ir gramai. Labai sunkių daiktų masė matuojama centneriais arba tonomis, o labai lengvų – miligramais.</p>
+<p>Svarbu žinoti, koks ryšys tarp skirtingų masės matavimo vienetų (<a href="#p/2">#2 pav.</a>).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="2">2 pav.</span><span class="textbook-figure__caption-text">Masės vienetų sąryšiai ir naudojamos santrumpos</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQV4BQVgZGRkBQRmZv5jozp=/242882-1118132.png" alt="Masės vienetų sąryšiai ir naudojamos santrumpos" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Įsidėmėk, koks ryšys tarp skirtingų masės matavimo vienetų ir kaip jie trumpinami.</div></div></div></figure>
+</div>
+</div>
+</div>
+<div class="textbook-column-task-icon"></div>
+<div class="textbook-column-task-icon__question"></div>
+<div class="textbook-column__container">
+<div class="textbook-column__content">
+<div class="textbook-column-section textbook-column-section--task">
+Klausimai ir užduotys
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task111814" data-task_id="111814" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="111814">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Kiek kilogramų ir gramų sudaro 5$ \frac{3}{4} $ kg?</p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111814-1" name="task111814" data-comprehension_task_id="111814" data-answer_id="111814-1" data-correct_answer_id="111814-0">
+<label for="answer111814-1" class="textbook-comprehension-task__answer-label">5 kg 34 g</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111814-0" name="task111814" data-comprehension_task_id="111814" data-answer_id="111814-0" data-correct_answer_id="111814-0" checked="checked">
+<label for="answer111814-0" class="textbook-comprehension-task__answer-label">5 kg 750 g</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111814-2" name="task111814" data-comprehension_task_id="111814" data-answer_id="111814-2" data-correct_answer_id="111814-0">
+<label for="answer111814-2" class="textbook-comprehension-task__answer-label">5 kg 340 g</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111814-3" name="task111814" data-comprehension_task_id="111814" data-answer_id="111814-3" data-correct_answer_id="111814-0">
+<label for="answer111814-3" class="textbook-comprehension-task__answer-label">5kg 75 g</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task111815" data-task_id="111815" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="111815">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Kiek centnerių sudaro 65 t?</p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+ <input class="js-iCheck" type="radio" id="answer111815-0" name="task111815" data-comprehension_task_id="111815" data-answer_id="111815-0" data-correct_answer_id="111815-0" checked="checked">
+<label for="answer111815-0" class="textbook-comprehension-task__answer-label">650</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111815-3" name="task111815" data-comprehension_task_id="111815" data-answer_id="111815-3" data-correct_answer_id="111815-0">
+<label for="answer111815-3" class="textbook-comprehension-task__answer-label">650 000</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111815-1" name="task111815" data-comprehension_task_id="111815" data-answer_id="111815-1" data-correct_answer_id="111815-0">
+<label for="answer111815-1" class="textbook-comprehension-task__answer-label">6 500</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111815-2" name="task111815" data-comprehension_task_id="111815" data-answer_id="111815-2" data-correct_answer_id="111815-0">
+<label for="answer111815-2" class="textbook-comprehension-task__answer-label">65 000</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-column-section textbook-column-section--written-task">
+Atlik sąsiuvinyje
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111816" data-task_id="111816">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Palygink įrašydama(s) ženklą >, < arba =.</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<ol class="textbook-structural-task">
+<li class="textbook-structural-task__item">7 300 g ___ 73 kg</li>
+<li class="textbook-structural-task__item">43 cnt ___ 40 kg 300 g</li>
+<li class="textbook-structural-task__item">125 g ___ 1 kg 25 g</li>
+<li class="textbook-structural-task__item">215 t ___ 200 cnt 15 kg</li>
+<li class="textbook-structural-task__item">1 kg 150 g ___ 1 500 g</li>
+<li class="textbook-structural-task__item">1 500 mg ___ 1 g 500 mg</li>
+</ol>
+</div>
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111817" data-task_id="111817">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Išreikšk kilogramais:</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<ol class="textbook-structural-task">
+<li class="textbook-structural-task__item">4000 g</li>
+<li class="textbook-structural-task__item">15 t</li>
+<li class="textbook-structural-task__item">80 cnt</li>
+<li class="textbook-structural-task__item">3 kg 500 g</li>
+<li class="textbook-structural-task__item">10 kg 250 g</li>
+<li class="textbook-structural-task__item">7 kg 80 g</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="textbook__container js-textbook__container">
+<div class="textbook-paragraph js-textbook-paragraph textbook-collapsable js-textbook-collapsable tst-textbook-paragraph collapse" id="paragraph3" data-paragraph_id="111827">
+<div class="textbook-paragraph-collapse js-textbook-paragraph-collapse" id="js-textbook-paragraph-title-3"></div>
+<div class="textbook-paragraph-title textbook-paragraph-title--clickable js-textbook-paragraph__title">
+<div class="textbook-paragraph-title__index">3</div><div class="textbook-paragraph-title__text">Kas yra kilogramas?</div> </div>
+<div class="textbook-column textbook-column--student js-textbook-column--student textbook-column--center-block">
+<div class="textbook-column__container">
+<div class="textbook-column__header">
+<div class="textbook-column__header-text textbook-column__header-text--student">Mokinys</div>
+</div>
+<div class="textbook-column__content">
+<div class="textbook-markdown textbook-column__content-text">
+<p>Ieškodamas žinių apie pagrindinį masės matavimo vienetą – kilogramą, mokinys Vikipedijoje rado tokią informaciją:</p>
+<p><em>Kilogramo etalonas yra 39 mm skersmens ir tokio pat aukščio ritinio formos svarstis. Jis pagamintas iš platinos ir iridžio lydinio</em> (<a href="#p/1">#1 pav.</a>).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="1">1 pav.</span><span class="textbook-figure__caption-text">Kilogramo etalono 3D modelis</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQVlZQZgZGRkBQV3YaOhMj==/242203-111827.png" alt="Kilogramo etalono 3D modelis" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Ar žinai, kas yra etalonas?</div><div class="textbook-block-content__line">Kaip manai, kodėl buvo sukurtas kilogramo etalonas?</div></div></div></figure>
+<p>Įvairiais laikotarpiais skirtingose šalyse buvo naudojami skirtingi masės matavimo vienetai. Dažnai buvo sunku ir nepatogu taikytis prie kitų šalių matų. Dar daugiau sunkumų kėlė tai, kad nebuvo aiškaus ryšio tarp skirtingų matų, taip pat ir nepatogus, pernelyg laisvas jų skaidymas į smulkesnius arba smulkiųjų stambinimas. Tai stabdė tarptautinę prekybą, kūrė prielaidas sukčiauti, taip pat trukdė mokslo bei technikos vystymuisi.</p>
+<p>Kilo būtinybė masės matavimo vienetus suvienodinti – sukurti etaloną. Etalonas – tai pavyzdinis matas, naudojamas matavimo vienetui atkurti, saugoti ir perduoti didžiausiu įmanomu tikslumu. Išmatuoti kurio nors objekto masę – tai palyginti ją su etalono mase, t. y. nustatyti, kiek kartų ji didesnė ar mažesnė už etalono masę. Praktikoje sveriamų objektų masė lyginama su mase svarsčių, pagamintų pagal etaloną.</p>
+<p>Iki 1799 m. kilogramo etalonu buvo laikoma vieno litro +4 °C temperatūros vandens masė. Vėliau tikslesni matavimai parodė, kad vieno litro vandens masė esant +4 °C temperatūrai lygi 0,999973 kg.</p>
+<p>Po kurio laiko, 1889 m., kilogramo etalonu tapo 39 mm skersmens ir tokio paties aukščio degtukų dėžutės dydžio ritinio formos svarstis, pagamintas iš 90 % platinos ir 10 % iridžio lydinio. Šis etalono variantas išliko ligi šiol. Tarptautiniu kilogramo prototipu vadinamas etalonas yra saugomas Tarptautiniame svorių ir matų biure Sevre, Paryžiuje.</p>
+</div>
+</div>
+</div>
+<div class="textbook-column-task-icon"></div>
+<div class="textbook-column-task-icon__question"></div>
+<div class="textbook-column__container">
+<div class="textbook-column__content">
+<div class="textbook-column-section textbook-column-section--task">
+Klausimai ir užduotys
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task111831" data-task_id="111831" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="111831">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Vieno litro vandens masė esant +4 °C temperatūrai lygi 0,999973 kg. Kiek tai gramų?</p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111831-1" name="task111831" data-comprehension_task_id="111831" data-answer_id="111831-1" data-correct_answer_id="111831-0">
+<label for="answer111831-1" class="textbook-comprehension-task__answer-label">9,99973</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111831-2" name="task111831" data-comprehension_task_id="111831" data-answer_id="111831-2" data-correct_answer_id="111831-0">
+<label for="answer111831-2" class="textbook-comprehension-task__answer-label">99,9973</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+ <input class="js-iCheck" type="radio" id="answer111831-0" name="task111831" data-comprehension_task_id="111831" data-answer_id="111831-0" data-correct_answer_id="111831-0" checked="checked">
+<label for="answer111831-0" class="textbook-comprehension-task__answer-label">999,973</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111831-3" name="task111831" data-comprehension_task_id="111831" data-answer_id="111831-3" data-correct_answer_id="111831-0">
+<label for="answer111831-3" class="textbook-comprehension-task__answer-label">9999,73</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task111834" data-task_id="111834" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="111834">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Kiek miligramų 0,999973 kg skiriasi nuo 1 kg?</p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111834-0" name="task111834" data-comprehension_task_id="111834" data-answer_id="111834-0" data-correct_answer_id="111834-0" checked="checked">
+<label for="answer111834-0" class="textbook-comprehension-task__answer-label">27</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111834-1" name="task111834" data-comprehension_task_id="111834" data-answer_id="111834-1" data-correct_answer_id="111834-0">
+<label for="answer111834-1" class="textbook-comprehension-task__answer-label">270</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111834-2" name="task111834" data-comprehension_task_id="111834" data-answer_id="111834-2" data-correct_answer_id="111834-0">
+<label for="answer111834-2" class="textbook-comprehension-task__answer-label">2 700</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111834-3" name="task111834" data-comprehension_task_id="111834" data-answer_id="111834-3" data-correct_answer_id="111834-0">
+<label for="answer111834-3" class="textbook-comprehension-task__answer-label">27 000</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-column-section textbook-column-section--written-task">
+Atlik sąsiuvinyje
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111837" data-task_id="111837">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Turguje ūkininkas parduoda šilauoges indeliuose po 0,5 kg ir po 200 g. Iš viso ūkininkas turi 100 dėžučių – kiekvienos rūšies po lygiai.</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<ol class="textbook-structural-task">
+<li class="textbook-structural-task__item">Kiek kilogramų šilauogių ūkininkas atsivežė į turgų?</li>
+<li class="textbook-structural-task__item">Pardavęs visas šilauoges ūkininkas gavo 280 Eur. Apskaičiuok šilauogių 1 kg, 0,5 kg ir 200 g kainą.</li>
+</ol>
+</div>
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111838" data-task_id="111838">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Ant dribsnių dėžutės užrašytas toks jų paruošimo būdas:</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<p><em>Verdant košę reikia naudoti 1 dalį dribsnių ir 2 dalis pieno.</em></p>
+<p>Šeimininkė į puodą įpylė 300 g pieno. Kiek gramų dribsnių reikia tokiam pieno kiekiui?</p>
+</div>
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111839" data-task_id="111839">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Ant sirupo buteliuko parašyta:</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<p><em>Gaminant gėrimą reikia 1 dalį sirupo sumaišyti su 4 dalimis vandens.</em></p>
+<ol class="textbook-structural-task">
+<li class="textbook-structural-task__item">Kiek reikia įpilti vandens gaminant gėrimą iš 100 g sirupo?</li>
+<li class="textbook-structural-task__item">Kiek gramų sirupo ir kiek vandens reikia stiklinei gėrimo paruošti? Laikyk, kad į stiklinę telpa 250 g gėrimo.</li>
+</ol>
+</div>
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111840" data-task_id="111840">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Vaistų buteliukas, kuriame yra 20 tablečių, sveria 140 g.</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<p>Tas pats buteliukas su 10 tablečių sveria 110 g. Kiek sveria 1 tabletė ir tuščias buteliukas?</p>
+</div>
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111841" data-task_id="111841">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Krepšys su grybais sveria 7 kg 200 g.</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<p>Tuščio krepšio masė sudaro penktadalį grybų masės. Kiek sveria tuščias krepšys ir kiek – grybai?</p>
+</div>
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111842" data-task_id="111842">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Į kepyklą planuojama atvežti 200 maišų miltų.</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<p>Kiekvienas maišas sveria 60 kg. Į sunkvežimį kraunamos 2 t. Kiek sunkvežimių prireiks miltams pervežti?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="textbook__container js-textbook__container">
+<div class="textbook-paragraph js-textbook-paragraph textbook-collapsable js-textbook-collapsable tst-textbook-paragraph collapse" id="paragraph4" data-paragraph_id="111844">
+<div class="textbook-paragraph-collapse js-textbook-paragraph-collapse" id="js-textbook-paragraph-title-4"></div>
+<div class="textbook-paragraph-title textbook-paragraph-title--clickable js-textbook-paragraph__title">
+<div class="textbook-paragraph-title__index">4</div><div class="textbook-paragraph-title__text">Kokiais vienetais matuojama brangakmenių masė?</div> </div>
+<div class="textbook-column textbook-column--student js-textbook-column--student textbook-column--center-block">
+<div class="textbook-column__container">
+<div class="textbook-column__header">
+<div class="textbook-column__header-text textbook-column__header-text--student">Mokinys</div>
+</div>
+<div class="textbook-column__content">
+<div class="textbook-markdown textbook-column__content-text">
+<p>Didžiausias deimantas pasaulyje – <em>Lesedi la Rona</em>. Jis yra maždaug teniso kamuoliuko dydžio ir sveria 1 109 karatus (<a href="#p/1">#1 pav.</a>).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="1">1 pav.</span><span class="textbook-figure__caption-text">Deimantas *Lesedi la Rona*</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQV1AwDgZGRkBQD0ZF5jozp=/242564-1118441.png" alt="Deimantas *Lesedi la Rona*" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Ar žinai, kas yra karatas?</div><div class="textbook-block-content__line">Kokia deimanto *Lesedi la Rona* masė gramais?</div></div></div></figure>
+<p>Brangakmenių masė paprastai matuojama karatais.</p>
+<p>1 karatas = 200 miligramų.</p>
+<p>Karato santrumpa – <strong>ct</strong>, rašoma be taško, taigi 1 ct = 200 mg. Deimanto <em>Lesedi la Rona</em> masė gramais: 1109 $ \cdot $ 200 mg = 221,8 g.</p>
+<p>Karato pavadinimas yra kilęs iš saldžiosios ceratonijos pupelės ankšties pavadinimo (lot. <em>Ceratonia siliqua</em>). Ceratonijų pupelės nuo neatmenamų laikų buvo naudojamos tarsi svareliai deimanto masei nustatyti, nes pupelių masė beveik nesiskiria: kiekviena pupelė sveria būtent 200 mg (<a href="#p/2">#2 pav.</a>).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="2">2 pav.</span><span class="textbook-figure__caption-text">Saldžiųjų ceratonijų pupelės</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQVlZQLgZGRkBQD0Zv5jozp=/242206-1118442.png" alt="Saldžiųjų ceratonijų pupelės" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Kiek ceratonijų sėklų atitinka 5 karatus?</div></div></div></figure>
+<p>Juvelyrikoje deimantai karatais matuojami kaip atskiri akmenys arba kaip jų visuma. Pavyzdžiui, gali būti vienas deimantas, kuris sveria 1 karatą, ir gali būti daug mažų deimantukų, kurių bendra masė taip pat bus 1 karatas. Toks kiekis vadinamas bendru karatų skaičiumi.</p>
+</div>
+</div>
+</div>
+<div class="textbook-column-task-icon"></div>
+<div class="textbook-column-task-icon__question"></div>
+<div class="textbook-column__container">
+<div class="textbook-column__content">
+<div class="textbook-column-section textbook-column-section--task">
+Klausimai ir užduotys
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task111845" data-task_id="111845" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="111845">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Kiek gramų sudaro 1 karatą?</p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111845-3" name="task111845" data-comprehension_task_id="111845" data-answer_id="111845-3" data-correct_answer_id="111845-0">
+<label for="answer111845-3" class="textbook-comprehension-task__answer-label">20</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111845-0" name="task111845" data-comprehension_task_id="111845" data-answer_id="111845-0" data-correct_answer_id="111845-0" checked="checked">
+<label for="answer111845-0" class="textbook-comprehension-task__answer-label">0,2</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+ <input class="js-iCheck" type="radio" id="answer111845-2" name="task111845" data-comprehension_task_id="111845" data-answer_id="111845-2" data-correct_answer_id="111845-0">
+<label for="answer111845-2" class="textbook-comprehension-task__answer-label">2</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111845-1" name="task111845" data-comprehension_task_id="111845" data-answer_id="111845-1" data-correct_answer_id="111845-0">
+<label for="answer111845-1" class="textbook-comprehension-task__answer-label">0,02</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task111846" data-task_id="111846" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="111846">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Paversk 5 gramus karatais.</p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111846-0" name="task111846" data-comprehension_task_id="111846" data-answer_id="111846-0" data-correct_answer_id="111846-0" checked="checked">
+<label for="answer111846-0" class="textbook-comprehension-task__answer-label">25</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111846-3" name="task111846" data-comprehension_task_id="111846" data-answer_id="111846-3" data-correct_answer_id="111846-0">
+<label for="answer111846-3" class="textbook-comprehension-task__answer-label">1 000</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111846-2" name="task111846" data-comprehension_task_id="111846" data-answer_id="111846-2" data-correct_answer_id="111846-0">
+<label for="answer111846-2" class="textbook-comprehension-task__answer-label">250</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer111846-1" name="task111846" data-comprehension_task_id="111846" data-answer_id="111846-1" data-correct_answer_id="111846-0">
+<label for="answer111846-1" class="textbook-comprehension-task__answer-label">40</label>
+ </li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-column-section textbook-column-section--written-task">
+Atlik sąsiuvinyje
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111847" data-task_id="111847">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Didžiausias pasaulyje safyras rastas Šri Lankoje. Jo masė 1 404 karatai. Kiek tai gramų?</p>
+</div>
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task111848" data-task_id="111848">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Luvro muziejuje galima pamatyti persiko spalvos deimantą, pavadintą <em>Hortenzijos</em> vardu. Ilgą laiką šis deimantas buvo Prancūzijos karūnos puošmena. Jo masė yra 4 g.</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<ol class="textbook-structural-task">
+<li class="textbook-structural-task__item">Kiek tai karatų?</li>
+<li class="textbook-structural-task__item">Kiek gramų deimanto <em>Hortenzija</em> masė mažesnė už deimanto <em>Lesedi la Rona</em> masę?</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="textbook__container js-textbook__container">
+<div class="textbook-paragraph textbook-collapsable js-textbook-collapsable collapse" id="summary">
+<div class="textbook-paragraph-collapse js-textbook-paragraph-collapse"></div>
+<div class="textbook-paragraph-title textbook-paragraph-title--clickable js-textbook-paragraph__title" id="js-textbook-paragraph-title-summary">
+<div class="textbook-paragraph-title__index textbook-paragraph-title__index--summary"></div><div class="textbook-paragraph-title__text">Ką svarbiausia žinoti apie masę?</div> </div>
+<div class="textbook-column textbook-column--center-block">
+<div class="textbook-column__container">
+<div class="textbook-column__content">
+<div class="textbook-markdown textbook-column__content-text">
+<p>Pagrindinis masės matavimo vienetas yra kilogramas. Kasdieniame gyvenime masei nurodyti dažniausiai naudojami kilogramai ir gramai. Labai sunkių daiktų masė matuojama centneriais arba tonomis, o labai lengvų – miligramais.</p>
+<p>1 g = 1 000 mg</p>
+<p>1 kg = 1 000 g</p>
+<p>1 cnt = 100 kg</p>
+<p>1 t = 1 000 kg</p>
+<p>Po masės vienetų santrumpų taškas nerašomas. Masei nustatyti naudojamos įvairių rūšių svarstyklės.</p>
+<p>Objektas, sveriantis lygiai vieną kilogramą, yra kilogramo etalonas. Tai ritinio formos svarstis, pagamintas iš platinos ir iridžio lydinio. Šis etalonas yra saugomas Tarptautiniame svorių ir matų biure Sevre, netoli Paryžiaus.</p>
+<p>Brangakmenių masė paprastai matuojama karatais. 1 karatas = 200 miligramų. Karato santrumpa – ct, rašoma be taško: 1 ct = 200 mg.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="js-pnotify-hidden-texts hidden" data-title="Kaip naudoti EMA vadovėlį?" data-description="Per 5 minutes susipažinkite su vadovėliu."></div>
+<div class="demonstration-frame demonstration-frame__left"></div>
+<div class="demonstration-frame demonstration-frame__bottom"></div>
+<div class="demonstration-frame demonstration-frame__right"></div>
+<div class="demonstration-frame demonstration-frame__top"></div>
+<div id="footer" class="js-overlay-helper__adjust-on-overlay">
+<div class="container">
+<div class="row text-center">
+<div class="col-lg-12">
+<p>
+Gerbiami mokytojai,
+norime priminti, kad visas svetainėje emapamokos.lt pateiktas turinys yra intelektinė UAB "E. mokykla" nuosavybė,
+kurią <strong>draudžiama kopijuoti ir platinti neįsigijus prieigos</strong> savo mokiniams. Mes džiaugiamės, kad <strong>Jūs esate sąžiningas pilietis
+ir teisėtai naudojatės mūsų sukurta EMA elektronine mokymosi aplinka.</strong>
+</p>
+<p>© 2020, UAB „E. mokykla“ | +370 5 214 1306 | <a href="/cdn-cgi/l/email-protection#731a1d151c33161e1203121e1c181c005d1f07"><span class="__cf_email__" data-cfemail="523b3c343d12373f3322333f3d393d217c3e26">[email&#160;protected]</span></a></p>
+</div>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://emapamokos.lt/build/3.9ad43fa685ecb702605c.js"></script><script src="https://emapamokos.lt/build/utils.f79b5e5eac386d544d96.js"></script>
+<link rel="stylesheet" href="https://emapamokos.lt/build/9.4a5e56778bd975ac3eee.css" />
+<script src="https://emapamokos.lt/build/9.f21ed6705cb1caead298.js"></script><script src="https://emapamokos.lt/build/cookieConsentComponent.3a29713ce1482cd41bb1.js"></script>
+<input type="hidden" id="js-terms-of-service-cookie-url" value="https&#x3A;&#x2F;&#x2F;emapamokos.lt&#x2F;naudojimosiTaisykles#cookie">
+<script src="https://emapamokos.lt/build/preventDuplicateTabsComponent.cc11d557568ea338e260.js"></script>
+<script src="https://emapamokos.lt/build/baseLayoutView.7fdf4d5c1a6bbae1d7d8.js"></script>
+<input type="hidden" id="js-textbook-topic-view-data" data-is-debug-view="0" data-topic-id="1428" data-is-student-view="1" data-is-presentation-notification-closed="0" data-pnotify-close-url="https://emapamokos.lt/api/v1/teacherCloseTextbookPresentationNotification?token=rB2GbtEl18K1oDmwhKIwaic6YRLTT45VStSRDzTjefsNOclqGQ" data-comprehension-task-answer-track-url="https&#x3A;&#x2F;&#x2F;emapamokos.lt&#x2F;m&#x2F;vadovelis&#x2F;saugotiAtsakyma&#x2F;paskyrimas&#x2F;1d69f69a-f33e-11e9-a931-005056a48565&#x2F;token&#x2F;rB2GbtEl18K1oDmwhKIwaic6YRLTT45VStSRDzTjefsNOclqGQ" data-demonstration-start-track-url="https&#x3A;&#x2F;&#x2F;emapamokos.lt&#x2F;api&#x2F;v1&#x2F;teacherTrackDemonstrationStart&#x3F;token&#x3D;rB2GbtEl18K1oDmwhKIwaic6YRLTT45VStSRDzTjefsNOclqGQ">
+<script src="https://emapamokos.lt/build/mathjaxComponent.e3df7ab9ea521c04aa31.js"></script>
+<script src="https://emapamokos.lt/build/mathjax/2.7.8/MathJax.js"></script>
+<script src="https://emapamokos.lt/build/TextbookDemonstration.94ba0b46a9c2b8e83700.js"></script>
+<script src="https://emapamokos.lt/build/TextbookPresentationModal.86c8b61a63029f22bfc5.js"></script>
+<script src="https://emapamokos.lt/build/textbookTopicView.eb9e6ef1db5d9417c368.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"155d731471","applicationID":"368308365","transactionName":"ZwcENxNVWkpTBk0PC15NJRYSQFtUHRZNEwBVDBI8FVFMTVAKVg07UREVCgZaWVxcEQ==","queueTime":0,"applicationTime":80,"atts":"S0AHQVtPSUQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

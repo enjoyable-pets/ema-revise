@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="lt" class="teacher-layout teacher-layout--white-background ">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"155d731471",applicationID:"368308365"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/favicon.ico">
+<title>EMA elektroninė mokymosi aplinka</title>
+<script>
+    var APP = APP || {};
+    /**
+     * Wrapper function for Rollbar.error().
+     */
+    APP.reportError = function(/** string */ title, /** Array|Object|null= */ params, /** string|null= */ fingerprint, /** function= */ callback) {
+        // configure fingerprint
+        if (typeof(Rollbar) !== 'undefined' && typeof fingerprint !== 'undefined' && fingerprint) {
+            Rollbar.configure({
+                payload: {
+                    fingerprint: fingerprint
+                }
+            });
+        }
+        // report
+        if (typeof(Rollbar) !== 'undefined') {
+            Rollbar.error(title, params, callback);
+        } else {
+            console.error('APP.reportError: Rollbar is disabled, not reporting: ' + "\n" + title);
+            if (params) {
+                console.log(params);
+            }
+            if (callback) {
+                callback();
+            }
+        }
+    }
+</script>
+<script>
+            // Rollbar configuration
+            var _rollbarConfig = {
+                accessToken: 'ef4691e4935d489d8a65436fb6a3cd2b',
+                                ignoredMessages: [
+                    'Script error',
+                    'Script error.',
+                    'Синтаксическая ошибка',
+                    'Syntax error',
+                    'this.get(...).querySelectorAll is not a function',
+                    'Cannot read property \'manipulate_settings\' of undefined',
+                    'Can\'t execute code from a freed script',
+                    'Missing required parameters: sitekey'
+                ],
+                captureUncaught: true,
+                captureUnhandledRejections: true,
+                payload: {
+                    environment: 'production'
+                },
+                // Limits item count being sent to rollbar to 10 per client (default: 60 items per minute).
+                itemsPerMinute: 10,
+                // Limits item count being sent to rollbar to 10 per client for each page load (default: no limit)
+                maxItems: 10,
+                hostWhiteList: ['epratybos.lt', 'emapamokos.lt']
+            };
+
+            // Rollbar Snippet
+            !function(r){function o(n){if(e[n])return e[n].exports;var t=e[n]={exports:{},id:n,loaded:!1};return r[n].call(t.exports,t,t.exports,o),t.loaded=!0,t.exports}var e={};return o.m=r,o.c=e,o.p="",o(0)}([function(r,o,e){"use strict";var n=e(1),t=e(4);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/2.3.1/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,o,e){"use strict";function n(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}function t(r,o){this.options=r,this._rollbarOldOnError=null;var e=s++;this.shimId=function(){return e},window&&window._rollbarShims&&(window._rollbarShims[e]={handler:o,messages:[]})}function a(r,o){var e=o.globalAlias||"Rollbar";if("object"==typeof r[e])return r[e];r._rollbarShims={},r._rollbarWrappedError=null;var t=new p(o);return n(function(){o.captureUncaught&&(t._rollbarOldOnError=r.onerror,i.captureUncaughtExceptions(r,t,!0),i.wrapGlobals(r,t,!0)),o.captureUnhandledRejections&&i.captureUnhandledRejections(r,t,!0);var n=o.autoInstrument;return o.enabled!==!1&&(void 0===n||n===!0||"object"==typeof n&&n.network)&&r.addEventListener&&(r.addEventListener("load",t.captureLoad.bind(t)),r.addEventListener("DOMContentLoaded",t.captureDomContentLoaded.bind(t))),r[e]=t,t})()}function l(r){return n(function(){var o=this,e=Array.prototype.slice.call(arguments,0),n={shim:o,method:r,args:e,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)})}var i=e(2),s=0,d=e(3),c=function(r,o){return new t(r,o)},p=d.bind(null,c);t.prototype.loadFull=function(r,o,e,t,a){var l=function(){var o;if(void 0===r._rollbarDidLoad){o=new Error("rollbar.js did not load");for(var e,n,t,l,i=0;e=r._rollbarShims[i++];)for(e=e.messages||[];n=e.shift();)for(t=n.args||[],i=0;i<t.length;++i)if(l=t[i],"function"==typeof l){l(o);break}}"function"==typeof a&&a(o)},i=!1,s=o.createElement("script"),d=o.getElementsByTagName("script")[0],c=d.parentNode;s.crossOrigin="",s.src=t.rollbarJsUrl,e||(s.async=!0),s.onload=s.onreadystatechange=n(function(){if(!(i||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){s.onload=s.onreadystatechange=null;try{c.removeChild(s)}catch(r){}i=!0,l()}}),c.insertBefore(s,d)},t.prototype.wrap=function(r,o,e){try{var n;if(n="function"==typeof o?o:function(){return o||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){e&&"function"==typeof e&&e.apply(this,arguments);try{return r.apply(this,arguments)}catch(e){var o=e;throw"string"==typeof o&&(o=new String(o)),o._rollbarContext=n()||{},o._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=o,o}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(o){return r}};for(var u="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","),f=0;f<u.length;++f)t.prototype[u[f]]=l(u[f]);r.exports={setupShim:a,Rollbar:p}},function(r,o){"use strict";function e(r,o,e){if(r){var t;"function"==typeof o._rollbarOldOnError?t=o._rollbarOldOnError:r.onerror&&!r.onerror.belongsToShim&&(t=r.onerror,o._rollbarOldOnError=t);var a=function(){var e=Array.prototype.slice.call(arguments,0);n(r,o,t,e)};a.belongsToShim=e,r.onerror=a}}function n(r,o,e,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null),o.handleUncaughtException.apply(o,n),e&&e.apply(r,n)}function t(r,o,e){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var e=r.reason,n=r.promise,t=r.detail;!e&&t&&(e=t.reason,n=t.promise),o&&o.handleUnhandledRejection&&o.handleUnhandledRejection(e,n)};n.belongsToShim=e,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}}function a(r,o,e){if(r){var n,t,a="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(n=0;n<a.length;++n)t=a[n],r[t]&&r[t].prototype&&l(o,r[t].prototype,e)}}function l(r,o,e){if(o.hasOwnProperty&&o.hasOwnProperty("addEventListener")){for(var n=o.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(o,e,t){n.call(this,o,r.wrap(e),t)};t._rollbarOldAdd=n,t.belongsToShim=e,o.addEventListener=t;for(var a=o.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,o,e){a.call(this,r,o&&o._rollbar_wrapped||o,e)};l._rollbarOldRemove=a,l.belongsToShim=e,o.removeEventListener=l}}r.exports={captureUncaughtExceptions:e,captureUnhandledRejections:t,wrapGlobals:a}},function(r,o){"use strict";function e(r,o){this.impl=r(o,this),this.options=o,n(e.prototype)}function n(r){for(var o=function(r){return function(){var o=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,o)}},e="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","),n=0;n<e.length;n++)r[e[n]]=o(e[n])}e.prototype._swapAndProcessMessages=function(r,o){this.impl=r(this.options);for(var e,n,t;e=o.shift();)n=e.method,t=e.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],e.ts]):this[n].apply(this,t));return this},r.exports=e},function(r,o){"use strict";r.exports=function(r){return function(o){if(!o&&!window._rollbarInitialized){r=r||{};for(var e,n,t=r.globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;e=window._rollbarShims[i++];)n||(n=e.handler),e.handler._swapAndProcessMessages(l,e.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
+            // End Rollbar Snippet
+
+            // Error reporting customization starts here
+                            Rollbar.configure({
+                    payload: {
+                        person: {
+                            id: '526692',
+                            username: 'rebeka-036836',
+                            email: ''
+                        }
+                    }
+                });
+                    </script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&subset=latin-ext" rel="stylesheet">
+
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;//noinspection CommaExpressionJS
+            i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();//noinspection CommaExpressionJS
+            a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-42382589-8', 'auto', {'allowLinker': true});
+        ga('require', 'displayfeatures');         ga('require', 'linker');
+        ga('linker:autoLink', ['epratybos.lt']);
+
+                                ga('set', {'userId': '2fcc2ae3506e2f2fec9f127c0f82f2b4'});                         ga('set', 'dimension1', 'mokinys');
+                        ga('set', 'dimension2', 'Alytaus&#x20;Liki&#x0161;k&#x0117;li&#x0173;&#x20;progimnazija');
+                        ga('set', 'dimension3', 'Alytaus&#x20;m.&#x20;sav.');
+        
+        ga('send', 'pageview');
+    </script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42382589-10"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-42382589-10', {"dimension1":"ema","linker":{"domains":["epratybos.lt","egzaminatorius.lt","emapamokos.lt"]},"user_id":"62e9eede7ebadcb3619aada12a572231"});
+</script>
+<script>
+    var APP = APP || {};
+            APP.baseUrl = '';
+        APP.requestRelativeUri = '/m/vadovelis/mokinio-paskyrimas/04bc7bce-5d32-11ea-a931-005056a48565';
+        APP.pathInfoHash = 'b13fe25cdff92bb4880dab545de3275d';
+        APP.requestUri = 'https://emapamokos.lt/m/vadovelis/mokinio-paskyrimas/04bc7bce-5d32-11ea-a931-005056a48565';
+        APP.questionInput = APP.questionInput || {};
+    APP.questionInput.colorable = APP.questionInput.colorable || {};
+    APP.questionInput.colorable.colors = {};
+            APP.questionInput.colorable.colors.yellow = ('#F9DE3D');
+            APP.questionInput.colorable.colors.orange = ('#FBB03B');
+            APP.questionInput.colorable.colors.red = ('#E86767');
+            APP.questionInput.colorable.colors.blue = ('#7DB1EA');
+            APP.questionInput.colorable.colors.green = ('#B0CE52');
+    
+    var COLORABLE_COLOR_NONE = 'none';
+
+    var TEST_IS_STOPPED_BY_TEACHER = 1;
+    var TEST_IS_STOPPED_TIME_IS_UP = 2;
+
+    var STUDENT_TEST_STATE_TIMED_UP = 'timedUp';
+    var STUDENT_TEST_STATE_TEACHER_STOPPED = 'teacherStopped';
+    var STUDENT_TEST_STATE_TEACHER_REVIEWED = 'teacherReviewed';
+
+    var VIEW_MODE_STUDENT_TEST_IN_PROGRESS = 'modeStudentTestInProgress';
+    var VIEW_MODE_STUDENT_TEST_READ_ONLY_VIEW = 'modeStudentReadOnlyView';
+    var VIEW_MODE_TEACHER_STUDENT_TEST_VIEW = 'modeTeacherStudentTestView';
+    var VIEW_MODE_TEACHER_QUESTION_SET_PREVIEW = 'modeTeacherQuestionSetPreview';
+    var VIEW_MODE_TEACHER_REVIEW = 'teacherReview';
+    var VIEW_MODE_STUDENT_TEST_REVIEW_RESULTS = 'studentTestReviewResults';
+    var CHECKABLE_INPUT_CHECKED_VALUE = 'on';
+
+    var STUDENT_TEST_AJAX_SAVE_ERROR_CODE_AJAX_SAVE_FINISHED_TEST = 1;
+    var STUDENT_TEST_AJAX_SAVE_ERROR_CODE_ANSWER_FORMAT_INVALID = 2;
+
+    /* Swal (sweet alert) icons https://limonte.github.io/sweetalert2/ */
+    var SWAL_TYPE_SUCCESS = 'success';
+    var SWAL_TYPE_ERROR = 'error';
+    var SWAL_TYPE_WARNING = 'warning';
+    var SWAL_TYPE_INFO = 'info';
+    var SWAL_TYPE_QUESTION = 'question';
+
+    var PNOTIFY_STACK_BOTTOM_RIGHT = {"dir1": "up", "dir2": "left", "firstpos1": 50, "firstpos2": 2};
+    var PNOTIFY_STACK_BOTTOM_LEFT = {"dir1": "up", "dir2": "right", "firstpos1": 50, "firstpos2": 2};
+
+    var CONTACT_EMAIL = 'info@emapamokos.lt';
+    var CONTACT_PHONE = '+370 5 214 1306';
+</script>
+<script src="https://emapamokos.lt/build/runtime.3222a91ab0a966e050c9.js"></script><script src="https://emapamokos.lt/build/0.f2a0980d25036293c7fb.js"></script><script src="https://emapamokos.lt/build/global.jquery.358c642ae3411aa21418.js"></script>
+<link rel="stylesheet" href="https://emapamokos.lt/build/global.bootstrap.b1af5cad97709b72ffb9.css" />
+<script src="https://emapamokos.lt/build/1.42d0ef58e4912470816b.js"></script><script src="https://emapamokos.lt/build/global.bootstrap.3f27fe26e125190b144a.js"></script>
+<link rel="stylesheet" href="https://emapamokos.lt/build/utils.3e263ee6eb83d53e58d8.css" />
+<script src="https://emapamokos.lt/build/googleAnalyticsEventTrackingComponent.bafc5b7c29975a9f24f1.js"></script>
+<link rel="stylesheet" href="https://emapamokos.lt/build/baseLayoutView.f244822395cdb862a0ff.css" />
+<link rel="stylesheet" href="https://emapamokos.lt/build/textbookTopicView.6530a6bd4f2145656629.css" />
+</head>
+<body class="">
+<nav class="navbar navbar-ema slh-studentLayoutHeader" role="navigation">
+<div class="container">
+
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#studentLayoutHeaderCollapse">
+ <span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="https://emapamokos.lt/m"></a>
+</div>
+
+<div class="collapse navbar-collapse" id="studentLayoutHeaderCollapse">
+<ul class="nav navbar-nav navbar-right slh-links">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<i class="fa fa-user"></i> Rebeka <span class="caret"></span>
+</a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://emapamokos.lt/sistema"><i class="fa fa-cogs"></i> Sistemos reikalavimai</a></li>
+</ul>
+</li>
+<li>
+<a class="btn btn-danger navbar-btn slh-logoutButton" href="https://emapamokos.lt/m/logout" id="btn-logout">
+Atsijungti <i class="fa fa-sign-out fa-fw"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="container">
+</div>
+<div class="textbook js-app-textbook textbook--student-view
+            tst-textbook-topic-page__student-assignment-id-04bc7bce-5d32-11ea-a931-005056a48565            tst-textbook-topic-page__topic_id-1386
+        " id="home">
+<div class="textbook-top-header js-textbook-header">
+<div class="textbook__container textbook__container--header">
+<div class="textbook-sticky-header__row"><div class="col-md-12"><h1 class="textbook-topic-title"><a href="#home" class="textbook-topic-title__anchor js-textbook-toc__link">Natūraliųjų skaičių daugyba </a></h1></div></div><div id="js-spy-textbook-toc"><ul class="textbook-toc nav"><li class="textbook-toc__link-block"><a href="#infographic" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-infographic" class="textbook-toc__link js-textbook-toc__link" title="Infografikas"><span class="textbook-toc__link-icon textbook-toc__link-icon--icon-infographic"></span><span class="textbook-toc__link-title">Infografikas</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph1" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-1" class="textbook-toc__link js-textbook-toc__link" title="Ką prisimeni apie daugybos lentelę?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">1</span><span class="textbook-toc__link-title">Ką prisimeni apie daugybos...</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph2" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-2" class="textbook-toc__link js-textbook-toc__link" title="Kaip dauginti skaičius stulpeliu?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">2</span><span class="textbook-toc__link-title">Kaip dauginti skaičius stulpeliu?</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph3" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-3" class="textbook-toc__link js-textbook-toc__link" title="Ką verta žinoti apie daugybą?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">3</span><span class="textbook-toc__link-title">Ką verta žinoti apie daugybą?</span></a></li><li class="textbook-toc__link-block"><a href="#summary" class="textbook-toc__link js-textbook-toc__link" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-summary" title="Ką svarbiausia žinoti apie natūraliųjų skaičių daugybą?"><span class="textbook-toc__link-icon textbook-toc__link-icon--icon-summary"></span><span class="textbook-toc__link-title">Ką svarbiausia žinoti apie...</span></a></li></ul></div>
+</div>
+</div>
+<div class="textbook-sticky-header js-textbook-header js-overlay-helper__adjust-on-overlay" data-spy="affix" data-offset-top="230" data-offset-bottom="230">
+<div class="textbook__container textbook__container--header">
+<div class="textbook-sticky-header__row"><div class="col-md-12"><h1 class="textbook-topic-title"><a href="#home" class="textbook-topic-title__anchor js-textbook-toc__link">Natūraliųjų skaičių daugyba </a></h1></div></div><div id="js-spy-textbook-toc"><ul class="textbook-toc nav"><li class="textbook-toc__link-block"><a href="#infographic" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-infographic" class="textbook-toc__link js-textbook-toc__link" title="Infografikas"><span class="textbook-toc__link-icon textbook-toc__link-icon--icon-infographic"></span><span class="textbook-toc__link-title">Infografikas</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph1" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-1" class="textbook-toc__link js-textbook-toc__link" title="Ką prisimeni apie daugybos lentelę?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">1</span><span class="textbook-toc__link-title">Ką prisimeni apie daugybos...</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph2" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-2" class="textbook-toc__link js-textbook-toc__link" title="Kaip dauginti skaičius stulpeliu?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">2</span><span class="textbook-toc__link-title">Kaip dauginti skaičius stulpeliu?</span></a></li><li class="textbook-toc__link-block"><a href="#paragraph3" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-3" class="textbook-toc__link js-textbook-toc__link" title="Ką verta žinoti apie daugybą?"><span class="textbook-toc__link-icon textbook-toc__link-icon--number">3</span><span class="textbook-toc__link-title">Ką verta žinoti apie daugybą?</span></a></li><li class="textbook-toc__link-block"><a href="#summary" class="textbook-toc__link js-textbook-toc__link" data-js_paragraph_id_to_toggle="#js-textbook-paragraph-title-summary" title="Ką svarbiausia žinoti apie natūraliųjų skaičių daugybą?"><span class="textbook-toc__link-icon textbook-toc__link-icon--icon-summary"></span><span class="textbook-toc__link-title">Ką svarbiausia žinoti apie...</span></a></li></ul></div>
+</div>
+</div>
+<br>
+<div class="textbook__container js-textbook__container">
+<div class="textbook-paragraph  textbook-collapsable js-textbook-collapsable collapse " id="infographic">
+<div class="textbook-paragraph-collapse js-textbook-paragraph-collapse"></div>
+<div class="textbook-paragraph-title  textbook-paragraph-title--clickable  js-textbook-paragraph__title" id="js-textbook-paragraph-title-infographic">
+<div class="textbook-paragraph-title__index textbook-paragraph-title__index--infographic"></div><div class="textbook-paragraph-title__text">Infografikas</div> </div>
+<div class="textbook-column textbook-column--center-block">
+<div class="textbook-column__container">
+<div class="textbook-infographic js-textbook-infographic">
+<img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lAQNkZmNgnJ5zo2qlLJMcn2SmZGZ4Av5jozp=/240130-infografikas1386.png" class="textbook-infographic__image js-textbook-infographic__image" alt="Infografikas: Natūraliųjų skaičių daugyba">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="textbook__container js-textbook__container">
+<div class="textbook-paragraph js-textbook-paragraph textbook-collapsable js-textbook-collapsable tst-textbook-paragraph collapse" id="paragraph1" data-paragraph_id="110480">
+<div class="textbook-paragraph-collapse js-textbook-paragraph-collapse" id="js-textbook-paragraph-title-1"></div>
+<div class="textbook-paragraph-title textbook-paragraph-title--clickable js-textbook-paragraph__title">
+<div class="textbook-paragraph-title__index">1</div><div class="textbook-paragraph-title__text">Ką prisimeni apie daugybos lentelę?</div> </div>
+<div class="textbook-column textbook-column--student js-textbook-column--student textbook-column--center-block">
+<div class="textbook-column__container">
+<div class="textbook-column__header">
+<div class="textbook-column__header-text textbook-column__header-text--student">Mokinys</div>
+</div>
+<div class="textbook-column__content">
+<div class="textbook-markdown textbook-column__content-text">
+<p>Norint nusipirkti brangesnį daiktą, kartais tenka taupyti pinigus (<a href="#p/1">#1 pav.</a>).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="1">1 pav.</span><span class="textbook-figure__caption-text">Taupyklė</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AGNgZGRjAQtjZF5jozp=/236750-1104801.png" alt="Taupyklė" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Kiek pinigų bus taupyklėje po 6 savaičių, jeigu kiekvieną savaitę į ją įdėsime po 1 Eur? Po 2 Eur? Po 3 Eur? Po kiek eurų reikia įdėti į taupyklę, kad po 6 savaičių turėtume 30 Eur?</div></div></div></figure>
+<p>Ar prisimeni daugybos lentelę? <a href="#p/2">#2 pav.</a> pavaizduotoje daugybos lentelėje raudoni ir mėlyni skaičiai yra daugikliai, o juodi skaičiai – daugiklių sandaugos.</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="2">2 pav.</span><span class="textbook-figure__caption-text">Daugybos lentelė</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AQtgZGRjAQtjZv5jozp=/236748-1104802.png" alt="Daugybos lentelė" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Surask daugybos lentelėje reikiamas sandaugas.</div></div></div></figure>
+<p>Naudodamiesi daugybos lentele, galime iš karto atsakyti į visus klausimus.
+Jeigu kiekvieną savaitę į taupyklę dėtume po 1 Eur, tai po 6 savaičių taupyklėje būtų 6 eurai. Jeigu po 2 Eur – 12 eurų, jeigu po 3 Eur – 18 eurų. Kad taupyklėje turėtume 30 Eur, kiekvieną savaitę į taupyklę reikia įdėti po 5 Eur.</p>
+</div>
+</div>
+</div>
+<div class="textbook-column-task-icon"></div>
+<div class="textbook-column-task-icon__question"></div>
+<div class="textbook-column__container">
+<div class="textbook-column__content">
+<div class="textbook-column-section textbook-column-section--task">
+Klausimai ir užduotys
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task110482" data-task_id="110482" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="110482">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Aštuoni mokiniai turi išsidalyti po 7 vaivorykštės spalvų pieštukus. Kiek iš viso pieštukų mokiniai išsidalys?</p>
+<p><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AGVgZGRjAQtlYaOhMj==/236752-110482.png" alt="" /></p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110482-1" name="task110482" data-comprehension_task_id="110482" data-answer_id="110482-1" data-correct_answer_id="110482-0">
+<label for="answer110482-1" class="textbook-comprehension-task__answer-label">54</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110482-2" name="task110482" data-comprehension_task_id="110482" data-answer_id="110482-2" data-correct_answer_id="110482-0">
+<label for="answer110482-2" class="textbook-comprehension-task__answer-label">42 </label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110482-3" name="task110482" data-comprehension_task_id="110482" data-answer_id="110482-3" data-correct_answer_id="110482-0">
+<label for="answer110482-3" class="textbook-comprehension-task__answer-label">48</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110482-0" name="task110482" data-comprehension_task_id="110482" data-answer_id="110482-0" data-correct_answer_id="110482-0" checked="checked">
+<label for="answer110482-0" class="textbook-comprehension-task__answer-label">56</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task110483" data-task_id="110483" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="110483">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Kuri sandauga <strong>nėra</strong> lygi 24?</p>
+</div>
+ <ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110483-2" name="task110483" data-comprehension_task_id="110483" data-answer_id="110483-2" data-correct_answer_id="110483-0">
+<label for="answer110483-2" class="textbook-comprehension-task__answer-label">4 ∙ 6 </label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110483-0" name="task110483" data-comprehension_task_id="110483" data-answer_id="110483-0" data-correct_answer_id="110483-0" checked="checked">
+<label for="answer110483-0" class="textbook-comprehension-task__answer-label">4 ∙ 8</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110483-1" name="task110483" data-comprehension_task_id="110483" data-answer_id="110483-1" data-correct_answer_id="110483-0">
+<label for="answer110483-1" class="textbook-comprehension-task__answer-label">3 ∙ 8</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110483-3" name="task110483" data-comprehension_task_id="110483" data-answer_id="110483-3" data-correct_answer_id="110483-0">
+<label for="answer110483-3" class="textbook-comprehension-task__answer-label">6 ∙ 4</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task110484" data-task_id="110484" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="110484">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Lentelėje pavaizduota nepilna daugybos lentelė. Kokia neįrašytų skaičių suma?</p>
+<p><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmtmAmZgZGRjAQt0YaOhMj==/238373-110484.png" alt="" /></p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110484-3" name="task110484" data-comprehension_task_id="110484" data-answer_id="110484-3" data-correct_answer_id="110484-0">
+<label for="answer110484-3" class="textbook-comprehension-task__answer-label">44</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110484-1" name="task110484" data-comprehension_task_id="110484" data-answer_id="110484-1" data-correct_answer_id="110484-0">
+<label for="answer110484-1" class="textbook-comprehension-task__answer-label">130</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110484-0" name="task110484" data-comprehension_task_id="110484" data-answer_id="110484-0" data-correct_answer_id="110484-0" checked="checked">
+<label for="answer110484-0" class="textbook-comprehension-task__answer-label">140</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110484-2" name="task110484" data-comprehension_task_id="110484" data-answer_id="110484-2" data-correct_answer_id="110484-0">
+<label for="answer110484-2" class="textbook-comprehension-task__answer-label">90 </label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="textbook__container js-textbook__container">
+<div class="textbook-paragraph js-textbook-paragraph textbook-collapsable js-textbook-collapsable tst-textbook-paragraph collapse" id="paragraph2" data-paragraph_id="110486">
+<div class="textbook-paragraph-collapse js-textbook-paragraph-collapse" id="js-textbook-paragraph-title-2"></div>
+<div class="textbook-paragraph-title textbook-paragraph-title--clickable js-textbook-paragraph__title">
+<div class="textbook-paragraph-title__index">2</div><div class="textbook-paragraph-title__text">Kaip dauginti skaičius stulpeliu?</div> </div>
+<div class="textbook-column textbook-column--student js-textbook-column--student textbook-column--center-block">
+<div class="textbook-column__container">
+<div class="textbook-column__header">
+<div class="textbook-column__header-text textbook-column__header-text--student">Mokinys</div>
+</div>
+<div class="textbook-column__content">
+<div class="textbook-markdown textbook-column__content-text">
+<p>2017 metais buvo 365 dienos. Tiek pat dienų sudaro 2018 ir 2019 metus (<a href="#p/1">#1 pav.</a>).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="1">1 pav.</span><span class="textbook-figure__caption-text">365 dienos</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AwZgZGRjAQt2ZF5jozp=/236763-1104861.png" alt="365 dienos" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Kiek iš viso dienų sudaro 2017, 2018 ir 2019 metus?</div></div></div></figure>
+<p>Sandauga 3 ∙ 365 yra lygi sumai 365 + 365 + 365.</p>
+<p>Užrašykime šios sumos dėmenis skyrių vienetais:</p>
+<p>3 ∙ 100 + 6 ∙ 10 + 5 ∙ 1 + 3 ∙ 100 + 6 ∙ 10 + 5 ∙ 1 + 3 ∙ 100 + 6 ∙ 10 + 5 ∙ 1.</p>
+<p>Sumoje iš viso turime 9 šimtus, 18 dešimčių ir 15 vienetų. Šiuos skaičius matome, kai dauginame 3 ir 365 stulpeliu (<a href="#p/2">#2 pav.</a>, 1).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="2">2 pav.</span><span class="textbook-figure__caption-text">Skaičių 3 ir 365 sandauga</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AwHgZGRjAQt2Zv5jozp=/236765-1104862.png" alt="Skaičių 3 ir 365 sandauga" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Kurią sandaugą – 3 ∙ 365 ar 365 ∙ 3 – lengviau apskaičiuoti?</div></div></div></figure>
+<p>Sandaugos yra lygios, tik daugikliai sukeisti vietomis.</p>
+<p>Tai <strong>daugybos perstatomumo dėsnis: a ∙ b = b ∙ a</strong>. Todėl dauginant stulpeliu patogu pirmoje eilutėje rašyti skaičių, kuriame yra daugiau skaitmenų.</p>
+<p>Daugyba stulpeliu patogi, kai reikia sudauginti didesnius skaičius.</p>
+<p>Kristijono Donelaičio knygoje <em>Metai</em> yra 160 puslapių. Bibliotekoje yra 125 tokios knygos (<a href="#p/3">#3 pav.</a>).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="3">3 pav.</span><span class="textbook-figure__caption-text">125 knygos</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AwpgZGRjAQt2Zl5jozp=/236767-1104863.png" alt="125 knygos" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Kiek puslapių yra tokiose penkiose knygose? Dvidešimtyje knygų? Šimte knygų? O visose knygose?</div></div></div></figure>
+<p>Sudauginę 160 ir 5 gauname 800 puslapių, o sudauginę 160 ir 20 gauname 3 200 puslapių. Šimte knygų bus 16 000 puslapių.
+Visose knygose esančių puslapių skaičių apskaičiuokime daugindami stulpeliu (<a href="#p/4">#4 pav.</a>).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="4">4 pav.</span><span class="textbook-figure__caption-text">Skaičių 160 ir 125 daugyba stulpeliu</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AwRgZGRjAQt2AP5jozp=/236761-1104864.png" alt="Skaičių 160 ir 125 daugyba stulpeliu" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Kiek tūkstančių puslapių yra K. Donelaičio 125 knygose *Metai*?</div></div></div></figure>
+<p>Taigi matome, kad 125 K. Donelaičio <em>Metų</em> knygose yra 20 tūkstančių puslapių.</p>
+</div>
+</div>
+</div>
+<div class="textbook-column-task-icon"></div>
+<div class="textbook-column-task-icon__question"></div>
+<div class="textbook-column__container">
+<div class="textbook-column__content">
+<div class="textbook-column-section textbook-column-section--task">
+Klausimai ir užduotys
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task110492" data-task_id="110492" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="110492">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Kuri daugyba stulpeliu yra teisinga?</p>
+<p><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AwtgZGRjAQxlYaOhMj==/236768-110492.png" alt="" /></p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110492-0" name="task110492" data-comprehension_task_id="110492" data-answer_id="110492-0" data-correct_answer_id="110492-0" checked="checked">
+<label for="answer110492-0" class="textbook-comprehension-task__answer-label">A</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110492-1" name="task110492" data-comprehension_task_id="110492" data-answer_id="110492-1" data-correct_answer_id="110492-0">
+<label for="answer110492-1" class="textbook-comprehension-task__answer-label">B</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110492-3" name="task110492" data-comprehension_task_id="110492" data-answer_id="110492-3" data-correct_answer_id="110492-0">
+<label for="answer110492-3" class="textbook-comprehension-task__answer-label">D</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110492-2" name="task110492" data-comprehension_task_id="110492" data-answer_id="110492-2" data-correct_answer_id="110492-0">
+<label for="answer110492-2" class="textbook-comprehension-task__answer-label">C</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task110493" data-task_id="110493" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="110493">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Kokio skaičiaus trūksta, kad daugyba stulpeliu būtų teisinga?</p>
+<p><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AmNgZGRjAQxmYaOhMj==/236770-110493.png" alt="" /></p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110493-2" name="task110493" data-comprehension_task_id="110493" data-answer_id="110493-2" data-correct_answer_id="110493-0">
+<label for="answer110493-2" class="textbook-comprehension-task__answer-label">791 </label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110493-3" name="task110493" data-comprehension_task_id="110493" data-answer_id="110493-3" data-correct_answer_id="110493-0">
+<label for="answer110493-3" class="textbook-comprehension-task__answer-label">771</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110493-1" name="task110493" data-comprehension_task_id="110493" data-answer_id="110493-1" data-correct_answer_id="110493-0">
+<label for="answer110493-1" class="textbook-comprehension-task__answer-label">442</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110493-0" name="task110493" data-comprehension_task_id="110493" data-answer_id="110493-0" data-correct_answer_id="110493-0" checked="checked">
+<label for="answer110493-0" class="textbook-comprehension-task__answer-label">452</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task110494" data-task_id="110494" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="110494">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Kam lygi pavaizduota sandauga?</p>
+<p><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AmVgZGRjAQx0YaOhMj==/236772-110494.png" alt="" /></p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110494-3" name="task110494" data-comprehension_task_id="110494" data-answer_id="110494-3" data-correct_answer_id="110494-0">
+<label for="answer110494-3" class="textbook-comprehension-task__answer-label">1 044</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+ <input class="js-iCheck" type="radio" id="answer110494-1" name="task110494" data-comprehension_task_id="110494" data-answer_id="110494-1" data-correct_answer_id="110494-0">
+<label for="answer110494-1" class="textbook-comprehension-task__answer-label">6 214</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110494-2" name="task110494" data-comprehension_task_id="110494" data-answer_id="110494-2" data-correct_answer_id="110494-0">
+<label for="answer110494-2" class="textbook-comprehension-task__answer-label">634 </label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110494-0" name="task110494" data-comprehension_task_id="110494" data-answer_id="110494-0" data-correct_answer_id="110494-0" checked="checked">
+<label for="answer110494-0" class="textbook-comprehension-task__answer-label">1 054</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-column-section textbook-column-section--written-task">
+Atlik sąsiuvinyje
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task110495" data-task_id="110495">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Sudaugink stulpeliu:</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<ol class="textbook-structural-task">
+<li class="textbook-structural-task__item"><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AmLgZGRjAQx1ZF5jozp=/236776-1104951.png" alt=""></li>
+<li class="textbook-structural-task__item"><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AmtgZGRjAQx1Zv5jozp=/236778-1104952.png" alt=""></li>
+<li class="textbook-structural-task__item"><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3BQNgZGRjAQx1Zl5jozp=/236780-1104953.png" alt=""></li>
+<li class="textbook-structural-task__item"><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3BQVgZGRjAQx1AP5jozp=/236782-1104954.png" alt=""></li>
+<li class="textbook-structural-task__item"><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3BQDgZGRjAQx1AF5jozp=/236784-1104955.png" alt=""></li>
+<li class="textbook-structural-task__item"><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AmDgZGRjAQx1Av5jozp=/236774-1104956.png" alt=""></li>
+</ol>
+</div>
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task110496" data-task_id="110496">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Užrašyk daugybą stulpeliu ir apskaičiuok:</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<ol class="textbook-structural-task">
+<li class="textbook-structural-task__item">37 ∙ 11;</li>
+<li class="textbook-structural-task__item">22 ∙ 73;</li>
+<li class="textbook-structural-task__item">253 ∙ 41;</li>
+<li class="textbook-structural-task__item">72 ∙ 1 623;</li>
+<li class="textbook-structural-task__item">405 ∙ 2 121.</li>
+</ol>
+</div>
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task110497" data-task_id="110497">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Po raudonais kvadratais paslėptas tas pats skaitmuo. Kitas skaitmuo paslėptas po mėlynais kvadratais. Koks skaitmuo yra po raudonu kvadratu? O po mėlynu?</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<p><img src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmx2BQRgZGRjAQx3YaOhMj==/239681-110497.png" alt=""></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="textbook__container js-textbook__container">
+<div class="textbook-paragraph js-textbook-paragraph textbook-collapsable js-textbook-collapsable tst-textbook-paragraph collapse" id="paragraph3" data-paragraph_id="110499">
+<div class="textbook-paragraph-collapse js-textbook-paragraph-collapse" id="js-textbook-paragraph-title-3"></div>
+<div class="textbook-paragraph-title textbook-paragraph-title--clickable js-textbook-paragraph__title">
+<div class="textbook-paragraph-title__index">3</div><div class="textbook-paragraph-title__text">Ką verta žinoti apie daugybą?</div> </div>
+<div class="textbook-column textbook-column--student js-textbook-column--student textbook-column--center-block">
+<div class="textbook-column__container">
+<div class="textbook-column__header">
+<div class="textbook-column__header-text textbook-column__header-text--student">Mokinys</div>
+</div>
+<div class="textbook-column__content">
+<div class="textbook-markdown textbook-column__content-text">
+<p>Martyno Mažvydo katekizmas – pirmoji išspausdinta lietuviška knyga. 1997 m. buvo išleistas šios knygos leidimas, kuriame yra 175 puslapiai (<a href="#p/1">#1 pav.</a>).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="1">1 pav.</span><span class="textbook-figure__caption-text">M. Mažvydas *Katekizmas*</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AGtgZGRjAQx5ZF5jozp=/236758-1104991.png" alt="M. Mažvydas *Katekizmas*" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Kiek puslapių yra šimte tokių knygų? O trijuose šimtuose?</div></div></div></figure>
+<p>Prieš dauginant stulpeliu verta žinoti kelias daugybos savybes.</p>
+<p><strong>Skaičių padauginus iš 1, gaunamas tas pats skaičius</strong>.
+<strong>Skaičių padauginus iš 0, gaunamas nulis. Jeigu sandauga lygi nuliui, tai bent vienas daugiklis yra lygus 0</strong>.</p>
+<p><strong>Dauginant natūralųjį skaičių iš 10, 100, 1000, ..., to skaičiaus dešinėje prirašoma tiek nulių, kiek jų turi skaičius, iš kurio dauginama</strong>.</p>
+<p>Skaičių 175 ir 100 sandauga lygi 175 ∙ 100 = 17 500.</p>
+<p>Skaičius 175 ir 300 dauginsime stulpeliu trimis būdais (<a href="#p/2">#2 pav.</a>).</p>
+<figure class="textbook-figure js-textbook-figure"><figcaption class="textbook-figure__caption"><span class="textbook-figure__number js-textbook-figure__number" data-number_in_paragraph="2">2 pav.</span><span class="textbook-figure__caption-text">175 ir 300 daugyba</span></figcaption><div><img class="textbook-figure__image js-textbook-figure__image" src="https://ema3.eturinys.lt/f/MJ5wo2EyMP0lZmL3AGpgZGRjAQx5Zv5jozp=/236757-1104992.png" alt="175 ir 300 daugyba" /></div><div class="textbook-figure__task"><div class="textbook-block-content"><div class="textbook-block-content__line">Kuris daugybos būdas tau patogiausias?</div></div></div></figure>
+<p><a href="#p/2">#2 pav.</a>. antroje ir trečioje dalyje taikoma tokia daugybos taisyklė:
+<strong>dauginant natūraliuosius skaičius, kurie baigiasi nuliais, sudauginami skaičiai, gauti atmetus daugiklių gale esančius nulius, o gautos sandaugos gale prirašoma tiek nulių, kiek jų turi visi daugikliai</strong>.</p>
+<p>Skaičių 175 ir 300 sandauga 175 ∙ 300 pertvarkoma taip:</p>
+<p>175 ∙ (3 ∙ 100) = (175 ∙ 3) ∙ 100.</p>
+<p>Pirmiau sudauginami skaičiai 175 ir 3, tada gauta sandauga padidinama 100 kartų.</p>
+<p>Taip skaičiuodami sandaugą taikėme <strong>daugybos jungiamumo dėsnį</strong>:
+<strong>a ∙ (b ∙ c) = (a ∙ b) ∙ c</strong>.</p>
+<p>Daugybos dėsniai palengvina daugybą. Susipažinkime su dar vienu daugybos dėsniu – <strong>skirstomumo</strong>.</p>
+<p>Pagal šį dėsnį sandaugos (14 + 16) ∙ 20 ir 14 ∙ 20 + 16 ∙ 20 yra lygios, todėl sumą 14 + 16 ir 20 galima dauginti dvejopai.</p>
+<p><strong>Daugybos skirstomumo dėsnis užrašomas taip</strong>:
+<strong>(a + b) ∙ c = a ∙ c + b ∙ c</strong>.</p>
+</div>
+</div>
+</div>
+<div class="textbook-column-task-icon"></div>
+<div class="textbook-column-task-icon__question"></div>
+<div class="textbook-column__container">
+<div class="textbook-column__content">
+<div class="textbook-column-section textbook-column-section--task">
+Klausimai ir užduotys
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task110500" data-task_id="110500" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="110500">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Kam lygi sandauga 173 ∙ 0?</p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110500-3" name="task110500" data-comprehension_task_id="110500" data-answer_id="110500-3" data-correct_answer_id="110500-0">
+<label for="answer110500-3" class="textbook-comprehension-task__answer-label">1730</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+ <input class="js-iCheck" type="radio" id="answer110500-1" name="task110500" data-comprehension_task_id="110500" data-answer_id="110500-1" data-correct_answer_id="110500-0">
+<label for="answer110500-1" class="textbook-comprehension-task__answer-label">1 </label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110500-2" name="task110500" data-comprehension_task_id="110500" data-answer_id="110500-2" data-correct_answer_id="110500-0">
+<label for="answer110500-2" class="textbook-comprehension-task__answer-label">173 </label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110500-0" name="task110500" data-comprehension_task_id="110500" data-answer_id="110500-0" data-correct_answer_id="110500-0" checked="checked">
+<label for="answer110500-0" class="textbook-comprehension-task__answer-label">0</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task110501" data-task_id="110501" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="110501">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Kuri sandauga lygi 39 200?</p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110501-3" name="task110501" data-comprehension_task_id="110501" data-answer_id="110501-3" data-correct_answer_id="110501-0">
+<label for="answer110501-3" class="textbook-comprehension-task__answer-label">39 002 ∙ 1</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110501-2" name="task110501" data-comprehension_task_id="110501" data-answer_id="110501-2" data-correct_answer_id="110501-0">
+<label for="answer110501-2" class="textbook-comprehension-task__answer-label">3 902 ∙ 10 </label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110501-0" name="task110501" data-comprehension_task_id="110501" data-answer_id="110501-0" data-correct_answer_id="110501-0" checked="checked">
+<label for="answer110501-0" class="textbook-comprehension-task__answer-label">392 ∙ 100</label>
+ </li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110501-1" name="task110501" data-comprehension_task_id="110501" data-answer_id="110501-1" data-correct_answer_id="110501-0">
+<label for="answer110501-1" class="textbook-comprehension-task__answer-label">3 920 ∙ 0 </label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-comprehension-task js-textbook-comprehension-task js-textbook-task--student
+                                            tst-textbook-item-paragraph-cmpnt__comprehension-task
+                                        " id="js-task110502" data-task_id="110502" data-tst-textbook-item-paragraph-cmpnt__comprehension-task-id="110502">
+<div class="textbook-markdown textbook-comprehension-task__task js-textbook-task__number-container">
+<p>Kam lygi sandauga 703 ∙ 20?</p>
+</div>
+<ol class="textbook-comprehension-task__answers">
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110502-1" name="task110502" data-comprehension_task_id="110502" data-answer_id="110502-1" data-correct_answer_id="110502-0">
+<label for="answer110502-1" class="textbook-comprehension-task__answer-label">14 600</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110502-0" name="task110502" data-comprehension_task_id="110502" data-answer_id="110502-0" data-correct_answer_id="110502-0" checked="checked">
+<label for="answer110502-0" class="textbook-comprehension-task__answer-label">14 060</label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110502-2" name="task110502" data-comprehension_task_id="110502" data-answer_id="110502-2" data-correct_answer_id="110502-0">
+<label for="answer110502-2" class="textbook-comprehension-task__answer-label">1 406 </label>
+</li>
+<li class="textbook-comprehension-task__answer">
+<input class="js-iCheck" type="radio" id="answer110502-3" name="task110502" data-comprehension_task_id="110502" data-answer_id="110502-3" data-correct_answer_id="110502-0">
+<label for="answer110502-3" class="textbook-comprehension-task__answer-label">146</label>
+</li>
+</ol>
+<div class="textbook-comprehension-task__result js-textbook-comprehension-task__result"></div>
+</div>
+<div class="textbook-column-section textbook-column-section--written-task">
+Atlik sąsiuvinyje
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task110503" data-task_id="110503">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Sudaugink mintinai:</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<ol class="textbook-structural-task">
+<li class="textbook-structural-task__item">24 030 ∙ 1;</li>
+<li class="textbook-structural-task__item">7 403 ∙ 10;</li>
+<li class="textbook-structural-task__item">89 701∙ 0;</li>
+<li class="textbook-structural-task__item">9 831∙100;</li>
+<li class="textbook-structural-task__item">102 ∙ 20;</li>
+<li class="textbook-structural-task__item">425 ∙ 200.</li>
+</ol>
+</div>
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task110504" data-task_id="110504">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Sudaugink:</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<ol class="textbook-structural-task">
+<li class="textbook-structural-task__item">6 300 ∙ 400;</li>
+<li class="textbook-structural-task__item">40 700 ∙ 30;</li>
+<li class="textbook-structural-task__item">474 ∙ 250;</li>
+<li class="textbook-structural-task__item">87 040 ∙ 520.</li>
+</ol>
+</div>
+</div>
+<div class="textbook-written-task js-textbook-task--student" id="js-task110505" data-task_id="110505">
+<div class="textbook-written-task__title js-textbook-task__number-container">
+<p>Pritaikęs daugybos skirstomumo dėsnį (a + b) ∙ c = a ∙ c + b ∙ c sudaugink:</p>
+</div>
+<div class="textbook-written-task__task textbook-markdown">
+<ol class="textbook-structural-task">
+<li class="textbook-structural-task__item">25 ∙ 650 + 25 ∙150;</li>
+<li class="textbook-structural-task__item">123 ∙ 117 + 123 ∙ 83;</li>
+<li class="textbook-structural-task__item">913 ∙ 225 + 87 ∙ 225;</li>
+<li class="textbook-structural-task__item">1 327 ∙ 4 + 890 ∙ 4 + 283 ∙ 4;</li>
+<li class="textbook-structural-task__item">23 ∙ 13 + 23 ∙17 + 19 ∙ 37 + 11 ∙ 37;</li>
+<li class="textbook-structural-task__item">142 ∙ 245 + 142 ∙ 155 + 358 ∙ 590 – 358 ∙190.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+ <div class="textbook__container js-textbook__container">
+<div class="textbook-paragraph textbook-collapsable js-textbook-collapsable collapse" id="summary">
+<div class="textbook-paragraph-collapse js-textbook-paragraph-collapse"></div>
+<div class="textbook-paragraph-title textbook-paragraph-title--clickable js-textbook-paragraph__title" id="js-textbook-paragraph-title-summary">
+<div class="textbook-paragraph-title__index textbook-paragraph-title__index--summary"></div><div class="textbook-paragraph-title__text">Ką svarbiausia žinoti apie natūraliųjų skaičių daugybą?</div> </div>
+<div class="textbook-column textbook-column--center-block">
+<div class="textbook-column__container">
+<div class="textbook-column__content">
+<div class="textbook-markdown textbook-column__content-text">
+<p>Sukeitus daugiklius vietomis, sandauga išlieka tokia pati.
+Jeigu vienas iš daugiklių yra nulis, tai sandauga lygi nuliui.</p>
+<p>Dauginant natūraliuosius skaičius, kurie baigiasi nuliais, dauginami skaičiai, gauti atmetus daugiklių gale esančius nulius, o gautos sandaugos gale prirašoma tiek nulių, kiek jų turi visi daugikliai.</p>
+<p>Daugybos dėsniai:</p>
+<ul>
+<li>perstatomumo: a ∙ b = b ∙ a;</li>
+<li>jungiamumo: a ∙ (b ∙ c) = (a ∙ b) ∙ c;</li>
+<li>skirstomumo: (a + b) ∙ c = a ∙ c + b ∙ c.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="js-pnotify-hidden-texts hidden" data-title="Kaip naudoti EMA vadovėlį?" data-description="Per 5 minutes susipažinkite su vadovėliu."></div>
+<div class="demonstration-frame demonstration-frame__left"></div>
+<div class="demonstration-frame demonstration-frame__bottom"></div>
+<div class="demonstration-frame demonstration-frame__right"></div>
+<div class="demonstration-frame demonstration-frame__top"></div>
+<div id="footer" class="js-overlay-helper__adjust-on-overlay">
+<div class="container">
+<div class="row text-center">
+<div class="col-lg-12">
+<p>
+Gerbiami mokytojai,
+norime priminti, kad visas svetainėje emapamokos.lt pateiktas turinys yra intelektinė UAB "E. mokykla" nuosavybė,
+kurią <strong>draudžiama kopijuoti ir platinti neįsigijus prieigos</strong> savo mokiniams. Mes džiaugiamės, kad <strong>Jūs esate sąžiningas pilietis
+ir teisėtai naudojatės mūsų sukurta EMA elektronine mokymosi aplinka.</strong>
+</p>
+<p>© 2020, UAB „E. mokykla“ | +370 5 214 1306 | <a href="/cdn-cgi/l/email-protection#177e79717857727a7667767a787c7864397b63"><span class="__cf_email__" data-cfemail="d4bdbab2bb94b1b9b5a4b5b9bbbfbba7fab8a0">[email&#160;protected]</span></a></p>
+</div>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://emapamokos.lt/build/3.9ad43fa685ecb702605c.js"></script><script src="https://emapamokos.lt/build/utils.f79b5e5eac386d544d96.js"></script>
+<link rel="stylesheet" href="https://emapamokos.lt/build/9.4a5e56778bd975ac3eee.css" />
+<script src="https://emapamokos.lt/build/9.f21ed6705cb1caead298.js"></script><script src="https://emapamokos.lt/build/cookieConsentComponent.3a29713ce1482cd41bb1.js"></script>
+<input type="hidden" id="js-terms-of-service-cookie-url" value="https&#x3A;&#x2F;&#x2F;emapamokos.lt&#x2F;naudojimosiTaisykles#cookie">
+<script src="https://emapamokos.lt/build/preventDuplicateTabsComponent.cc11d557568ea338e260.js"></script>
+<script src="https://emapamokos.lt/build/baseLayoutView.7fdf4d5c1a6bbae1d7d8.js"></script>
+<input type="hidden" id="js-textbook-topic-view-data" data-is-debug-view="0" data-topic-id="1386" data-is-student-view="1" data-is-presentation-notification-closed="0" data-pnotify-close-url="https://emapamokos.lt/api/v1/teacherCloseTextbookPresentationNotification?token=rB2GbtEl18K1oDmwhKIwaic6YRLTT45VStSRDzTjefsNOclqGQ" data-comprehension-task-answer-track-url="https&#x3A;&#x2F;&#x2F;emapamokos.lt&#x2F;m&#x2F;vadovelis&#x2F;saugotiAtsakyma&#x2F;paskyrimas&#x2F;04bc7bce-5d32-11ea-a931-005056a48565&#x2F;token&#x2F;rB2GbtEl18K1oDmwhKIwaic6YRLTT45VStSRDzTjefsNOclqGQ" data-demonstration-start-track-url="https&#x3A;&#x2F;&#x2F;emapamokos.lt&#x2F;api&#x2F;v1&#x2F;teacherTrackDemonstrationStart&#x3F;token&#x3D;rB2GbtEl18K1oDmwhKIwaic6YRLTT45VStSRDzTjefsNOclqGQ">
+<script src="https://emapamokos.lt/build/mathjaxComponent.e3df7ab9ea521c04aa31.js"></script>
+<script src="https://emapamokos.lt/build/mathjax/2.7.8/MathJax.js"></script>
+<script src="https://emapamokos.lt/build/TextbookDemonstration.94ba0b46a9c2b8e83700.js"></script>
+<script src="https://emapamokos.lt/build/TextbookPresentationModal.86c8b61a63029f22bfc5.js"></script>
+<script src="https://emapamokos.lt/build/textbookTopicView.eb9e6ef1db5d9417c368.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"155d731471","applicationID":"368308365","transactionName":"ZwcENxNVWkpTBk0PC15NJRYSQFtUHRZNEwBVDBI8FVFMTVAKVg07UREVCgZaWVxcEQ==","queueTime":0,"applicationTime":71,"atts":"S0AHQVtPSUQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

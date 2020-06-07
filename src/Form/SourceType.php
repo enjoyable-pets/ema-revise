@@ -10,14 +10,16 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class SourceType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('content')
             ->add('type', ChoiceType::class, [
                 'choices' => [
+                    'Exercise' => 'exercise',
+                    'Exercise answer' => 'answer',
                     'Textbook' => 'textbook',
-                    'Exercise' => 'exercise'
+                    'Other' => 'other',
                 ]
             ])
             ->add('url')
@@ -25,7 +27,7 @@ class SourceType extends AbstractType
         ;
     }
 
-    public function configureOptions(OptionsResolver $resolver)
+    public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
             'data_class' => Source::class,
