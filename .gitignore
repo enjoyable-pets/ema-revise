@@ -1,4 +1,5 @@
 .idea
+docker/volumes/
 
 ###> symfony/framework-bundle ###
 /.env.local
